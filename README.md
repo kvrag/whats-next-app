@@ -12,7 +12,7 @@ Future steps include adding user registration for tracking emotional state over 
 
 - Built in Ionic 3 (Angular 2) and Cordova for iOS and Android
 
-- Dependent on [What's Next? API](https://github.com/caristopmer/whats-next-api)
+- Back end: [What's Next? API](https://github.com/caristopmer/whats-next-api)
 
 
 What's Next? API uses Circle CI and rspec for its testing suite.
