@@ -6,6 +6,8 @@ Everyone has had that moment of inertia, when life has dealt you a hand and you'
 
 Tell What's Next? how your day is going. Using the [Emoj API](https://medium.com/@dannyfreed/today-im-launching-emoj-an-api-that-can-interpret-emotion-from-a-text-based-conversation-6b2ea3fa98b), What's Next? analyzes your emotional state and chooses an array of small, manageable, low-stakes activities that might make your day a little brighter, or start you on the right direction for what comes after.
 
+**Instructions:** Download the What's Next? app on your iPhone or Android. Open the app and either type or speak a few sentences about your day - it can be anything! Try the small step suggested by the app for getting unstuck.
+
 Future steps include adding user registration for tracking emotional state over time.
 
 #### Versions and Dependencies
