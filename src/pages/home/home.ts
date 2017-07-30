@@ -18,6 +18,10 @@ export class HomePage {
     // });
   }
 
+  openInput() {
+    this.navCtrl.push("FormTextPage");
+  };
+
   // logForm() {
   //   let headers = new Headers();
   //   headers.append('Accept', 'application/json');
