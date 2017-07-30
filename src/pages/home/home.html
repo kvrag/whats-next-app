@@ -1,14 +1,9 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <form [formGroup]="emoteForm" (ngSubmit)="logForm()">
+    <ion-label>How are you feeling?</ion-label>
+    <ion-textarea formControlName="emote"></ion-textarea>
+    <button ion-button type="submit" [disabled]="!emoteForm.valid">Oh gosh!</button>
+  </form>
+  
 </ion-content>
