@@ -8,10 +8,10 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms'
   templateUrl: 'home.html'
 })
 export class HomePage {
-  private emote: FormGroup;
+  private emoteForm: FormGroup;
 
   constructor(public http: Http, private formBuilder: FormBuilder) {
-    this.emote = this.formBuilder.group({
+    this.emoteForm = this.formBuilder.group({
       emote: ['', Validators.required]
     });
   }
@@ -23,9 +23,10 @@ export class HomePage {
     headers.append('Content-Type', 'application/json');
     let options = new RequestOptions({ headers: headers });
 
-    let postParams = this.emote.value;
+    let postParams = this.emoteForm.value;
+    console.log(postParams)
 
-    this.http.post("https://httpbin.org/post", postParams, options)
+    this.http.post("https://whatsnext-api.herokuapp.com/emotes", postParams, options)
     .subscribe(data => {
       console.log(data['_body']);
     }, error => {
