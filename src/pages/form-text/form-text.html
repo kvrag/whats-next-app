@@ -1,0 +1,25 @@
+ <ion-header>
+
+  <ion-navbar>
+    <ion-title class="center">Unstuck</ion-title>
+  </ion-navbar>
+
+</ion-header> 
+
+
+<ion-content padding>
+
+  <div class="center">
+    <h1 class="h1-title"><p>What's going on?</p></h1>
+  </div>
+
+  <div class="center">
+    <form [formGroup]="emoteForm" (ngSubmit)="logForm()">
+      <div class="border">
+        <ion-textarea formControlName="emote" rows="7"></ion-textarea>
+      </div>
+      <button ion-button type="submit" [disabled]="!emoteForm.valid" class="wide button-margin" round medium>Submit</button>
+    </form>
+  </div>
+
+</ion-content>
