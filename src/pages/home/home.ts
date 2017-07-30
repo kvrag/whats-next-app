@@ -24,6 +24,12 @@ export class HomePage {
     let options = new RequestOptions({ headers: headers });
 
     let postParams = this.emote.value;
-  }
 
+    this.http.post("https://httpbin.org/post", postParams, options)
+    .subscribe(data => {
+      console.log(data['_body']);
+    }, error => {
+      console.log(error);
+    });
+  }
 }
