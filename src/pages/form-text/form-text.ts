@@ -39,5 +39,4 @@ export class FormTextPage {
       console.log(error);
     });
   }
-
 }
