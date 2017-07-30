@@ -1,9 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title class="center">Home</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
 <ion-content>
 
-  <form [formGroup]="emoteForm" (ngSubmit)="logForm()">
-    <ion-label>How are you feeling?</ion-label>
-    <ion-textarea formControlName="emote"></ion-textarea>
-    <button ion-button type="submit" [disabled]="!emoteForm.valid">Oh gosh!</button>
-  </form>
-  
+  <div class="center"> 
+    <h1 class="h1-title">Unstuck</h1>
+  </div>
+
+  <div class="center">
+    <p class="message">Tell me how your day is going, and we'll get you unstuck. </p>
+  </div>
+
+  <div class="center button-margin">
+    <button class="wide" ion-button round medium (click)="openInput()">Text</button>
+  </div>
+  <div class="center button-margin">
+    <button class="wide" ion-button round medium>Voice</button>
+  </div>
+  <div class="center button-margin">
+    <button class="wide" ion-button round medium>SOS</button>
+  </div>
+
 </ion-content>
