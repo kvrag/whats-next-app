@@ -4,6 +4,7 @@ import { NavController } from 'ionic-angular';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 // import { ResponsePage } from '../response/response';
 import 'rxjs/add/operator/map';
+import { Device } from '@ionic-native/device'
 
 @Component({
   selector: 'page-home',
@@ -12,12 +13,15 @@ import 'rxjs/add/operator/map';
 
 export class HomePage {
   private emoteForm: FormGroup;
+  public deviceId: any;
 
-  constructor(public http: Http, public navCtrl: NavController, private formBuilder: FormBuilder) {
+  constructor(public http: Http, public navCtrl: NavController, private formBuilder: FormBuilder, private device: Device) {
     this.emoteForm = this.formBuilder.group({
       emote: ['', Validators.required]
     });
+    this.deviceId  = this.device.uuid;
   }
+
 
   logForm() {
     let headers = new Headers();
