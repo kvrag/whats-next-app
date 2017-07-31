@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http, RequestOptions, Headers } from '@angular/http';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { SpeechRecognition } from '@ionic-native/speech-recognition';
 import 'rxjs/add/operator/map'
 
 @IonicPage()
@@ -13,7 +14,7 @@ import 'rxjs/add/operator/map'
 export class FormVoicePage {
   private emoteForm: FormGroup;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, private formBuilder: FormBuilder) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, private formBuilder: FormBuilder, private speechRecognition: SpeechRecognition) {
     this.emoteForm = this.formBuilder.group({
       emote: ['', Validators.required]
     })
@@ -21,6 +22,7 @@ export class FormVoicePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FormVoicePage');
+    console.log(`banana ${this.speechRecognition.isRecognitionAvailable()}`);
   }
 
   voiceForm() {
@@ -45,4 +47,5 @@ export class FormVoicePage {
     this.navCtrl.popToRoot();
   }
 
+  
 }
