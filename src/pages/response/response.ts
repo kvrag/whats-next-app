@@ -18,7 +18,7 @@ export class ResponsePage {
   }
 
   ionViewDidLoad() {
-
+    
   }
 
   openHelp () {
