@@ -86,7 +86,7 @@
 }
 
 .smaller {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 // -- response page
@@ -97,13 +97,11 @@
 
 // response script area
 .response {
-    font-size: 35px;
+    font-size: 32px;
     line-height: 40px;
     width: 90%;
     margin: 10% auto;
-
 }
-
 
 // -- home page
 .main-title {
@@ -123,6 +121,8 @@
 // -- form page
 .form-font {
     font-size: 20px;
+    font-weight: lighter;
+    padding: 5px;
 }
 
 
