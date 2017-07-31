@@ -37,7 +37,7 @@ export class FormVoicePage {
       this.navCtrl.push('LoadingPage');
       setTimeout(function() {
         this.navCtrl.push('ResponsePage', {emote: data.action});
-      }.bind(this), 7000);
+      }.bind(this), 12000);
       console.log(data);
     }, error => {
       console.log(error);
