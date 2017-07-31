@@ -17,4 +17,7 @@ export class ResponsePage {
 
   }
 
+  openHelp () {
+    this.navCtrl.push("HelpPage");
+  }
 }
