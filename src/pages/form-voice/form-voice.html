@@ -1,8 +1,8 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <ion-title class="center">Unstuck</ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
 
 <ion-content padding>
@@ -32,6 +32,10 @@
       </div>
       <button ion-button type="Submit" [disabled]="!emoteForm.valid" class="wide button-margin" round large>Submit</button>
     </form>
+  </div>
+
+  <div class="center button-margin">
+    <button class="wide" ion-button round medium (click)="returnHome()">Home</button>
   </div>
 
 
