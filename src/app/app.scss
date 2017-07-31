@@ -151,7 +151,9 @@
     color: #fff;
     -webkit-font-smoothing: antialiased;
     position: absolute;
-  
+    text-align: center;
+    line-height: 200px;
+    font-size: 30px;
     -webkit-animation: breathing 6s linear infinite;
     animation: breathing 6s linear infinite;
     }
