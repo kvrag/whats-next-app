@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title class="center">Unstuck</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <div class="center">
+    <h1 class="h1-title"><p>What's going on?</p></h1>
+  </div>
+
+  <div class="center">
+      <button ion-fab class="inline-icon-button bottom-margin">
+        <ion-icon name="microphone"></ion-icon>
+      </button>
+
+      <button ion-fab class="inline-icon-button bottom-margin">
+        <ion-icon name="square"></ion-icon>
+      </button>
+
+      <button ion-fab class="inline-icon-button bottom-margin">
+        <ion-icon name="refresh"></ion-icon>
+      </button> 
+  </div>
+
+  <div class="center">
+    <form [formGroup]="emoteForm" (ngSubmit)="voiceForm()">
+      <div class="border">
+        <ion-textarea formControlName="emote" rows="7"></ion-textarea>
+      </div>
+      <button ion-button type="Submit" [disabled]="!emoteForm.valid" class="wide button-margin" round large>Submit</button>
+    </form>
+  </div>
+
+
+
+</ion-content>
