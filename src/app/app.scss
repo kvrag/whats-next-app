@@ -14,3 +14,72 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+.md button {
+    text-transform: none;
+}
+
+.wide-message {
+    width: 80%;
+    margin: 10% auto;
+}
+
+.wide {
+    width: 40%;
+}
+
+.message {
+    width: 80%;
+    margin: 5% auto;
+    padding: 5%;
+}
+
+.button-margin {
+    margin: 5% 0;
+}
+
+.h1-title {
+    margin-top: 20%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.inline-icon-button {
+    display: inline-block;
+    margin: 5%;
+}
+
+.bottom-margin {
+    margin-bottom: 5%;
+}
+
+.script {
+    font-family: 'Kalam', cursive;
+    font-size: 25px;
+}
+
+.script-smaller {
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+}
+
+.response {
+    font-size: 35px;
+}
+
+.default-font {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.form-font {
+    font-size: 20px;
+}
+
+.transparent {
+    background-color: hsla(0,0,100,.3);
+}

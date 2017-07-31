@@ -1,11 +1,4 @@
-<!-- <ion-header>
-  <ion-navbar>
-    <ion-title class="center">Unstuck</ion-title>
-  </ion-navbar>
-</ion-header> -->
-
-
-<ion-content padding>
+<ion-content padding class="default-font">
 
   <div class="center">
     <h1 class="h1-title"><p>What's going on?</p></h1>
@@ -27,15 +20,15 @@
 
   <div class="center">
     <form [formGroup]="emoteForm" (ngSubmit)="voiceForm()">
-      <div class="border">
-        <ion-textarea formControlName="emote" rows="7"></ion-textarea>
+      <div>
+        <ion-textarea class="form-font transparent" formControlName="emote" rows="7"></ion-textarea>
       </div>
       <button ion-button type="Submit" [disabled]="!emoteForm.valid" class="wide button-margin" round large>Submit</button>
     </form>
   </div>
 
   <div class="center button-margin">
-    <button class="wide" ion-button round medium (click)="returnHome()">Home</button>
+    <button class="wide" ion-button round large (click)="returnHome()">Home</button>
   </div>
 
 
