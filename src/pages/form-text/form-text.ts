@@ -39,4 +39,8 @@ export class FormTextPage {
       console.log(error);
     });
   }
+
+  returnHome() {
+    this.navCtrl.popToRoot();
+  }
 }

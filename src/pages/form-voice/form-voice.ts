@@ -41,4 +41,8 @@ export class FormVoicePage {
     });
   }
 
+  returnHome() {
+    this.navCtrl.popToRoot();
+  }
+
 }

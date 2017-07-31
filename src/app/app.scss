@@ -14,3 +14,115 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+.wide {
+    width: 40%;
+}
+
+.h1-title {
+    margin-top: 20%;
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.bottom-margin {
+    margin-bottom: 5%;
+}
+
+.default-font {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+}
+
+.transparent {
+    background-color: hsla(0,0,100,.3);
+}
+
+.grad {
+  background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(100%, hsla(186,50,75,1)), color-stop(0%, hsla(170,50,85,1)));
+}
+
+.script {
+    font-family: 'Shadows Into Light Two', cursive; //'Kalam', cursive;//'Dawning of a New Day', cursive; //'Calligraffitti', cursive; // //'Kalam', cursive;
+    font-size: 28px;
+    letter-spacing: 3px;
+}
+
+// -- buttons
+.button-margin {
+    margin: 5% 0;
+}
+
+.inline-icon-button {
+    display: inline-block;
+    margin: 5%;
+}
+
+.md button {
+    text-transform: lowercase;
+    letter-spacing: 2px;
+}
+
+.ios button {
+    text-transform: lowercase;
+    letter-spacing: 2px;
+}
+
+// -- help page
+
+.help-title {
+    font-size: 35px;
+}
+
+//help script area
+.wide-message {
+    width: 90%;
+    margin: 5% auto;
+}
+
+.smaller {
+    font-size: 20px;
+}
+
+// -- response page
+.response-title {
+    font-size: 28px;
+    font-weight: lighter;
+} 
+
+// response script area
+.response {
+    font-size: 32px;
+    line-height: 40px;
+    width: 90%;
+    margin: 10% auto;
+}
+
+// -- home page
+.main-title {
+    letter-spacing: 5px;
+    font-size: 50px;
+    text-transform: lowercase;
+    font-weight: lighter;
+}
+
+//home script area
+.message {
+    width: 90%;
+    margin: 5% auto;
+    padding: 5%;
+}
+
+// -- form page
+.form-font {
+    font-size: 20px;
+    font-weight: lighter;
+    padding: 5px;
+}
+
+
