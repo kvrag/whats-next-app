@@ -16,7 +16,7 @@
 // automatically applied to the <body> element in the app.
 
 .center {
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -123,6 +123,113 @@
     font-size: 20px;
     font-weight: lighter;
     padding: 5px;
+}
+
+// -- breathing circles
+#bigger-circle {
+  width: 200px;
+  height: 200px;
+  margin: 50% auto;
+  left: 23%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: hsla(0, 0, 100, 0.3);
+  position: absolute;
+  z-index: -1;
+}
+
+#circle {
+    width: 200px;
+    height: 200px;
+    margin: 50% auto;
+    left: 23%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #60B7BF;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+  
+    -webkit-animation: breathing 6s linear infinite;
+    animation: breathing 6s linear infinite;
+    }
+
+
+@keyframes breathing {
+  0% {
+    opacity:1;
+    transform:  rotate(0deg) scaleX(0.5) scaleY(0.5) ;
+  }
+  50% {
+    opacity:1;
+    transform:  rotate(0deg) scaleX(1) scaleY(1) ;
+  }
+  100% {
+    opacity:1;
+    transform:  rotate(0deg) scaleX(0.5) scaleY(0.5) ;
+  }
+}
+
+@-moz-keyframes breathing {
+  0% {
+    opacity:1;
+    -moz-transform:  rotate(0deg) scaleX(0.5) scaleY(0.5) ;
+  }
+  50% {
+    opacity:1;
+    -moz-transform:  rotate(0deg) scaleX(1) scaleY(1) ;
+  }
+  100% {
+    opacity:1;
+    -moz-transform:  rotate(0deg) scaleX(0.5) scaleY(0.5) ;
+  }
+}
+
+@-webkit-keyframes breathing {
+  0% {
+    opacity:1;
+    -webkit-transform:  rotate(0deg) scaleX(0.5) scaleY(0.5) ;
+  }
+  50% {
+    opacity:1;
+    -webkit-transform:  rotate(0deg) scaleX(1) scaleY(1) ;
+  }
+  100% {
+    opacity:1;
+    -webkit-transform:  rotate(0deg) scaleX(0.5) scaleY(0.5) ;
+  }
+}
+
+@-o-keyframes breathing {
+  0% {
+    opacity:1;
+    -o-transform:  rotate(0deg) scaleX(0.5) scaleY(0.5) ;
+  }
+  50% {
+    opacity:1;
+    -o-transform:  rotate(0deg) scaleX(1) scaleY(1) ;
+  }
+  100% {
+    opacity:1;
+    -o-transform:  rotate(0deg) scaleX(0.5) scaleY(0.5) ;
+  }
+}
+
+@-ms-keyframes breathing {
+  0% {
+    opacity:1;
+    -ms-transform:  rotate(0deg) scaleX(0.5) scaleY(0.5) ;
+  }
+  50% {
+    opacity:1;
+    -ms-transform:  rotate(0deg) scaleX(1) scaleY(1) ;
+  }
+  100% {
+    opacity:1;
+    -ms-transform:  rotate(0deg) scaleX(0.5) scaleY(0.5) ;
+  }
 }
 
 
