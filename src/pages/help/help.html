@@ -1,17 +1,17 @@
-<ion-content padding class="default-font">
+<ion-content padding class="default-font grad">
 
   <div class="center"> 
-    <h1 class="h1-title"><p>Doctors Nearby</p></h1>
+    <h1 class="h1-title help-title"><p>Doctors Nearby</p></h1>
   </div>
 
   <div class="center">
-    <p class="wide-message script-smaller">If you've been feeling stuck for a long time, it might be worth considering talking to a mental health professional.</p>
+    <p class="wide-message script smaller">If you've been feeling stuck for a long time, it might be worth considering talking to a mental health professional.</p>
   </div>
 
 
    <form [formGroup]="doctorsForm" (ngSubmit)="logForm()">
-      <ion-item class="center wide">
-        <ion-input class="transparent" type="text" placeholder="ZIP Code" formControlName="zip"></ion-input>
+      <ion-item class="center wide transparent">
+        <ion-input type="text" placeholder="ZIP Code" formControlName="zip"></ion-input>
       </ion-item>
       <div class="center button-margin">
         <button ion-button type="submit" [disabled]="!doctorsForm.valid" class="wide button-margin" round large>Find Doctors</button>
