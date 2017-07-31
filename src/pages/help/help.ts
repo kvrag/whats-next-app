@@ -24,4 +24,8 @@ export class HelpPage {
     console.log("Finding doctors...");
   }
 
+  returnHome() {
+    this.navCtrl.popToRoot();
+  }
+
 }
