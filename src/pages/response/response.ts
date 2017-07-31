@@ -13,6 +13,10 @@ export class ResponsePage {
     this.emote = this.navParams.get('emote');
   }
 
+  returnHome() {
+    this.navCtrl.popToRoot();
+  }
+
   ionViewDidLoad() {
 
   }
