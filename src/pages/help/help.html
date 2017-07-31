@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title class="center">More Help</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div class="center"> 
+    <h1 class="h1-title"><p>Doctors Nearby</p></h1>
+  </div>
+
+  <div class="center">
+    <p class="wide-message">If you've been feeling stuck for a long time, it might be worth considering talking to a mental health professional.</p>
+  </div>
+
+
+   <form [formGroup]="doctorsForm" (ngSubmit)="logForm()">
+      <ion-item class="center wide">
+        <ion-input type="text" placeholder="ZIP Code" formControlName="zip"></ion-input>
+      </ion-item>
+      <div class="center button-margin">
+        <button ion-button type="submit" [disabled]="!doctorsForm.valid" class="wide button-margin" round medium>Find Doctors</button>
+      </div>  
+   </form>
+
+
+  <div class="center button-margin">
+    <button class="wide" ion-button round medium (click)="returnHome()">Home</button>
+  </div>
+
+  <div class="center button-margin">
+    <button ion-button round medium>Hotline Information</button>
+  </div>
+
+</ion-content>

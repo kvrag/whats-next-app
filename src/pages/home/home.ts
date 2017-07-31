@@ -16,6 +16,9 @@ export class HomePage {
     this.navCtrl.push("FormTextPage");
   };
 
+  openHelp () {
+    this.navCtrl.push("HelpPage");
+  }
   openVoiceInput() {
     this.navCtrl.push("FormVoicePage");
   }
