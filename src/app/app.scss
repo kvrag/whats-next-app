@@ -15,6 +15,21 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+.top-theme {
+    background-color: hsla(186,50,50,1);
+    padding-bottom: 20px;
+}
+
+.vertical-align {
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+}
+
+.ion-row {
+    flex: 1;
+}
+
 .center {
     margin: 0 auto;
     text-align: center;
@@ -31,25 +46,26 @@
 }
 
 .bottom-margin {
-    margin-bottom: 5%;
+    margin-bottom: 35px;
 }
 
 .top-margin {
-    margin-top: 5%;
+    margin-top: 35px;
 }
 
 .default-font {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
+    color: #222;
 }
 
 .transparent {
     background-color: hsla(0,0,100,.3);
 }
 
-.grad {
-  background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(100%, hsla(186,50,75,1)), color-stop(0%, hsla(170,50,85,1)));
-}
+// .grad {
+//   background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(100%, hsla(186,50,75,1)), color-stop(0%, hsla(170,50,85,1)));
+// }
 
 .script {
     font-family: 'Shadows Into Light Two', cursive; //'Kalam', cursive;//'Dawning of a New Day', cursive; //'Calligraffitti', cursive; // //'Kalam', cursive;
@@ -70,11 +86,13 @@
 
 .md button {
     text-transform: lowercase;
+    color: white;
     box-shadow: none;
 }
 
 .ios button {
     text-transform: lowercase;
+    color: white;
     box-shadow: none;
 }
 
@@ -121,8 +139,10 @@
 
 // -- response page
 .response-title {
-    font-size: 28px;
+    font-size: 25px;
     font-weight: lighter;
+    width: 75%;
+    margin: 0 auto;
 } 
 
 // response script area
@@ -153,6 +173,7 @@
     font-size: 20px;
     font-weight: lighter;
     padding: 5px;
+    white-space: normal;
 }
 
 // -- breathing circles
