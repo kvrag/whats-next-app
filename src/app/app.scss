@@ -15,7 +15,11 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-
+.home-button {
+    top: 85%;
+    left: 40%;
+    position: absolute;
+}
 
 .vertical-align {
     display: flex;
@@ -103,6 +107,10 @@
     box-shadow: none;
 }
 
+.button-top-margin {
+    margin-top: 50px;
+}
+
 // -- help page
 
 .help-title {
@@ -129,6 +137,10 @@
     text-transform: lowercase;
 }
 
+.title-padding {
+    padding: 20px 0;
+}
+
 //help script area
 .wide-message {
     width: 90%;
@@ -139,9 +151,25 @@
     font-size: 20px;
 }
 
+.info-card {
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.justify-right {
+    text-align: right;
+    padding-right: 25px;
+}
+
+.info-title {
+    font-size: 22px;
+    font-weight: lighter;
+} 
+
 // -- response page
 .response-title {
-    font-size: 25px;
+    font-size: 24px;
     font-weight: lighter;
     width: 75%;
     margin: 0 auto;

@@ -1,5 +1,7 @@
-
-
+<ion-header>
+  <ion-navbar color="primary">
+  </ion-navbar>
+</ion-header>
 
 <ion-content padding class="default-font">
 
@@ -29,10 +31,9 @@
   </ion-card>
 
 <!-- home button -->
-  <div class="center">
-    <button ion-fab class="inline-icon-button bottom-margin" (click)="returnHome()">
-      <ion-icon name="home"></ion-icon>
-    </button>
-  </div>
+<button ion-fab class="home-button" (click)="returnHome()">
+  <ion-icon name="home"></ion-icon>
+</button>
+
 
 </ion-content>

@@ -28,9 +28,6 @@
           </div>
           
         <div class="center">
-          <button ion-fab class="inline-icon-button bottom-margin" (click)="returnHome()">
-            <ion-icon name="home"></ion-icon>
-          </button>
           <button ion-fab type="submit" [disabled]="!emoteForm.valid" class="inline-icon-button bottom-margin" round large>
             <ion-icon name="send"></ion-icon>
           </button>
@@ -43,6 +40,10 @@
     </ion-row>
 
   </ion-grid>
+
+  <button ion-fab class="home-button" (click)="returnHome()">
+    <ion-icon name="home"></ion-icon>
+  </button>
 
   <!-- </span> -->
 

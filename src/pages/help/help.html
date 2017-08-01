@@ -5,9 +5,61 @@
 
 <ion-content padding class="default-font">
 
-  <!-- test calls Rachel -->
-  
-  <div class="center bottom-margin top-margin">
+   <ion-grid>
+    <ion-row>
+        <h1 class="h1-title title-padding">Professional Services</h1>
+    </ion-row>
+
+    <ion-row class="info-card">
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-8 >
+        <h2 class="info-title">Find Help Nearby</h2>
+        <p>SAMHSA Treatment Referral Helpline<br />1-877-726-4727</p>
+      </ion-col>
+
+      <ion-col col-2>
+        <button ion-fab class="inline button-top-margin" (click)="callNumber('3092870179')">
+          <ion-icon name="call"></ion-icon>
+        </button> 
+      </ion-col>
+
+      <ion-col col-1>
+      </ion-col>
+
+    </ion-row>
+    
+
+    <ion-row class="info-card">
+      
+      <ion-col col-1>
+      </ion-col>
+      
+      <ion-col col-8>
+        <h2 class="info-title">Talk Now</h2>
+        <p>National Suicide Prevention Hotline<br />1-800-273-8255</p>
+      </ion-col>
+
+      <ion-col col-2>
+        <button ion-fab class="inline button-top-margin" (click)="callNumber('6514976454')">
+          <ion-icon name="call"></ion-icon>
+        </button>
+      </ion-col> 
+
+      <ion-col col-1>
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
+
+  <button ion-fab class="home-button center" (click)="returnHome()">
+    <ion-icon name="home"></ion-icon>
+  </button>
+ 
+
+
+  <!-- <div class="center bottom-margin top-margin">
     <h1 class="h1-title">Professional Services</h1>
   </div>
 
@@ -28,7 +80,7 @@
     </ion-card-content>
   </ion-card>
 
-<!-- test calls Chris -->
+
 
 <ion-card class="bottom-margin top-margin">
   <ion-card-header>
@@ -46,11 +98,11 @@
     </ion-card-content>
   </ion-card>
 
-<!-- home button -->
+
   <div class="center">
     <button ion-fab class="inline-icon-button bottom-margin" (click)="returnHome()">
       <ion-icon name="home"></ion-icon>
     </button>
-  </div>
+  </div> -->
 
 </ion-content>
