@@ -13,18 +13,18 @@
       <ion-item class="center wide transparent">
         <ion-input type="text" placeholder="ZIP Code" formControlName="zip"></ion-input>
       </ion-item>
-      <div class="center button-margin">
-        <button ion-button type="submit" [disabled]="!doctorsForm.valid" class="button-margin" round large>Find Doctors</button>
+      <div class="center">
+        <button ion-fab type="submit" [disabled]="!doctorsForm.valid" class="inline-icon-button bottom-margin" round large>
+          <ion-icon name="medkit"></ion-icon>
+        </button>
+        <button ion-fab class="inline-icon-button bottom-margin" (click)="returnHome()">
+          <ion-icon name="home"></ion-icon>
+        </button>
+        <button ion-fab class="inline-icon-button bottom-margin">
+          <ion-icon name="alert"></ion-icon>
+        </button>
       </div>  
    </form>
 
-
-  <div class="center button-margin">
-    <button class="wide" ion-button round large (click)="returnHome()">Home</button>
-  </div>
-
-  <div class="center button-margin">
-    <button ion-button round large>Hotline Information</button>
-  </div>
 
 </ion-content>
