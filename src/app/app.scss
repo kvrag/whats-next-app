@@ -102,29 +102,18 @@
     font-size: 35px;
 }
 
-.relative {
-    position: relative;
-    margin: 0 auto; 
-    height: 20%;
+.inline {
+    display: inline-block;
+    vertical-align: middle;
 }
 
-.absolute-right {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 60px;
-}
-
-.absolute-left {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    padding-right: 70px;
+.float-right {
+    float: right;
 }
 
 .narrow {
-    width: 100px;
-    margin: 0 auto;
+    width: 210px;
+    padding-left: 20px;
 }
 
 //help script area

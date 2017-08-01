@@ -17,12 +17,21 @@
       <ion-icon name="create"></ion-icon>
     </button>
 
+<<<<<<< HEAD
     <button ion-fab ng-hide=speechAvailable class="center top-margin bottom-margin" (click)="openVoiceInput()">
       <ion-icon name="mic"></ion-icon>
     </button>
 
     <button ion-fab class="center bottom-margin top-margin" (click)="openHelp()">
       <ion-icon name="help-buoy"></ion-icon>
+=======
+    <button ion-fab *ngIf="speechAvailable" class="inline-icon-button bottom-margin" (click)="openVoiceInput()">
+      <ion-icon name="mic"></ion-icon>
+    </button>
+
+    <button ion-fab class="inline-icon-button bottom-margin" (click)="openHelp()">
+      <ion-icon name="help-circle"></ion-icon>
+>>>>>>> master
     </button>
   </div>
 </ion-row>
