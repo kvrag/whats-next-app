@@ -34,6 +34,10 @@
     margin-bottom: 5%;
 }
 
+.top-margin {
+    margin-top: 5%;
+}
+
 .default-font {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
@@ -61,16 +65,17 @@
 .inline-icon-button {
     display: inline-block;
     margin: 5%;
+    letter-spacing: 0;
 }
 
 .md button {
     text-transform: lowercase;
-    letter-spacing: 2px;
+    box-shadow: none;
 }
 
 .ios button {
     text-transform: lowercase;
-    letter-spacing: 2px;
+    box-shadow: none;
 }
 
 // -- help page
