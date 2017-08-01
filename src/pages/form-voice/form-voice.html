@@ -6,11 +6,11 @@
 
   <div class="center">
 
-      <button ion-fab class="inline-icon-button bottom-margin">
+      <button ion-fab (click)="startListening()" class="inline-icon-button bottom-margin">
         <ion-icon name="mic"></ion-icon>
       </button>
 
-      <button ion-fab class="inline-icon-button bottom-margin">
+      <button ion-fab showWhen="ios" (click)="stopListening()" class="inline-icon-button bottom-margin">
         <ion-icon name="square"></ion-icon>
       </button>
 
@@ -35,13 +35,6 @@
       </div>
     </form>
   </div>
-
-  
-  
-  <!-- <div class="center button-margin">
-    <button class="wide" ion-button round large (click)="returnHome()">Home</button>
-  </div> -->
-
 
 
 </ion-content>

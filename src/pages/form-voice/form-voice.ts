@@ -46,6 +46,10 @@ export class FormVoicePage {
       );
   }
 
+  stopRecording() {
+    this.speechRecognition.stopListening();
+  }
+
   voiceForm() {
     let headers = new Headers();
     headers.append('Accept', 'application/json');
