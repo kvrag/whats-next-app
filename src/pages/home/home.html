@@ -6,28 +6,73 @@
   </div>
 </div> 
 
-<ion-content class="default-font grad">
+<ion-header>
+  <ion-navbar color="primary">
+  </ion-navbar>
+</ion-header>
 
-  <div class="center"> 
-    <h1 class="h1-title main-title">Unstuck</h1>
-  </div>
+<ion-content class="default-font vertical-align">
 
-  <div class="center">
-    <p class="message script">Tell me how your day is going, and we'll get you unstuck. </p>
-  </div>
+  <ion-grid>
 
-  <div class="center">
-    <button ion-fab class="inline-icon-button bottom-margin" (click)="openInput()">
-      <ion-icon name="create"></ion-icon>
-    </button>
+    <ion-row>
+      <ion-col>
+        <div class="center top-margin">
+          <h2 class="response-title"><p>Tell me how your day is going. We'll get you unstuck. </p></h2>
+        </div>
+      </ion-col>
+    </ion-row>
 
-    <button ion-fab *ngIf="speechAvailable" class="inline-icon-button bottom-margin" (click)="openVoiceInput()">
-      <ion-icon name="mic"></ion-icon>
-    </button>
+    <ion-row>
+      <ion-col col-4>
+      </ion-col>
+      <ion-col col-2>
+         <button ion-fab class="top-margin center inline" (click)="openInput()">
+          <ion-icon name="create"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-2>
+        <div padding class="nav-word top-margin inline">Write</div> 
+      </ion-col>
+      <ion-col col-4>
+      </ion-col>
+    </ion-row>
 
-    <button ion-fab class="inline-icon-button bottom-margin" (click)="openAbout()">
-      <ion-icon name="help-circle"></ion-icon>
-    </button>
-  </div>
+    <ion-row>
+      <ion-col col-4>
+      </ion-col>
+      <ion-col col-2>
+        <!--*ngIf="speechAvailable"  -->
+         <button ion-fab  class="top-margin inline" (click)="openVoiceInput()">
+          <ion-icon name="mic"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-2>
+        <div padding class="nav-word top-margin inline">Speak</div> 
+      </ion-col>
+      <ion-col col-4>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-4>
+      </ion-col>
+      <ion-col col-2>
+         <button ion-fab class="top-margin inline" (click)="openAbout()">
+          <ion-icon name="help"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-2>
+        <div padding class="nav-word top-margin inline">Info</div>
+      </ion-col>
+      <ion-col col-4>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
 
 </ion-content>
+
+<ion-footer color="primary">
+  <ion-segment></ion-segment>
+</ion-footer>
