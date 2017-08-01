@@ -1,36 +1,53 @@
+<ion-header>
+  <ion-navbar color="primary">
+  </ion-navbar>
+</ion-header>
 
-<ion-content padding class="default-font grad">
+<ion-content padding class="default-font">
  
   <!-- <span ion-fixed style="height: 100%; width: 100%"> -->
 
+  <ion-grid>
+    <ion-row>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col>
+        <h1 class="h1-title"><p>What's going on?</p></h1>    
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
 
-  <div class="center">
-    <h1 class="h1-title"><p>What's going on?</p></h1>
-  </div>
+    <ion-row>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col>
+        <form [formGroup]="emoteForm" (ngSubmit)="logForm()">
+          <div>
+            <ion-textarea class="form-font" formControlName="emote" rows="3"></ion-textarea>
+          </div>
+          
+        <div class="center">
+          <button ion-fab class="inline-icon-button bottom-margin" (click)="returnHome()">
+            <ion-icon name="home"></ion-icon>
+          </button>
+          <button ion-fab type="submit" [disabled]="!emoteForm.valid" class="inline-icon-button bottom-margin" round large>
+            <ion-icon name="send"></ion-icon>
+          </button>
+        </div>
 
-  <div class="center">
-    <form [formGroup]="emoteForm" (ngSubmit)="logForm()">
-      <div>
-        <ion-textarea class="form-font transparent" formControlName="emote" rows="7"></ion-textarea>
-      </div>
-      
-    <div class="center">
-      <button ion-fab class="inline-icon-button bottom-margin" (click)="returnHome()">
-        <ion-icon name="home"></ion-icon>
-      </button>
-      <button ion-fab type="submit" [disabled]="!emoteForm.valid" class="inline-icon-button bottom-margin" round large>
-        <ion-icon name="send"></ion-icon>
-      </button>
-    </div>
+        </form>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
 
-    </form>
-  </div>
-
-  
-
-
-
+  </ion-grid>
 
   <!-- </span> -->
 
 </ion-content>
+
+<ion-footer color="primary">
+  <ion-segment></ion-segment>
+</ion-footer>

@@ -15,10 +15,7 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-.top-theme {
-    background-color: hsla(186,50,50,1);
-    padding-bottom: 20px;
-}
+
 
 .vertical-align {
     display: flex;
@@ -49,6 +46,10 @@
     margin-bottom: 35px;
 }
 
+.align-center {
+    margin-left: 150px;
+}
+
 .top-margin {
     margin-top: 35px;
 }
@@ -63,9 +64,9 @@
     background-color: hsla(0,0,100,.3);
 }
 
-// .grad {
-//   background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(100%, hsla(186,50,75,1)), color-stop(0%, hsla(170,50,85,1)));
-// }
+.grad {
+  background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(100%, hsla(186,50,75,1)), color-stop(0%, hsla(170,50,85,1)));
+}
 
 .script {
     font-family: 'Shadows Into Light Two', cursive; //'Kalam', cursive;//'Dawning of a New Day', cursive; //'Calligraffitti', cursive; // //'Kalam', cursive;
@@ -114,6 +115,12 @@
 .narrow {
     width: 210px;
     padding-left: 20px;
+}
+
+.nav-word {
+    font-size: 18px;
+    font-weight: lighter;
+    text-transform: lowercase;
 }
 
 //help script area
