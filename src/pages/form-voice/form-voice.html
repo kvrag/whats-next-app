@@ -5,8 +5,9 @@
   </div>
 
   <div class="center">
-      <button ion-fab class="inline-icon-button bottom-margin" (click)="startRecording()">
-        <ion-icon name="microphone"></ion-icon>
+
+      <button ion-fab class="inline-icon-button bottom-margin">
+        <ion-icon name="mic"></ion-icon>
       </button>
 
       <button ion-fab class="inline-icon-button bottom-margin">
@@ -23,13 +24,23 @@
       <div>
         <ion-textarea id="emote-text" class="form-font transparent" readonly value={{this.recordingContent}} formControlName="emote" rows="7"></ion-textarea>
       </div>
-      <button ion-button type="Submit" [disabled]="!emoteForm.valid" class="wide button-margin" round large>Submit</button>
+
+      <div class="center">
+        <button ion-fab class="inline-icon-button bottom-margin" (click)="returnHome()">
+          <ion-icon name="home"></ion-icon>
+        </button>
+        <button ion-fab type="Submit" [disabled]="!emoteForm.valid" class="inline-icon-button bottom-margin" round large>
+          <ion-icon name="send"></ion-icon>
+        </button>
+      </div>
     </form>
   </div>
 
-  <div class="center button-margin">
+  
+  
+  <!-- <div class="center button-margin">
     <button class="wide" ion-button round large (click)="returnHome()">Home</button>
-  </div>
+  </div> -->
 
 
 

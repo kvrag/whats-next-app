@@ -34,6 +34,10 @@
     margin-bottom: 5%;
 }
 
+.top-margin {
+    margin-top: 5%;
+}
+
 .default-font {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
@@ -61,22 +65,48 @@
 .inline-icon-button {
     display: inline-block;
     margin: 5%;
+    letter-spacing: 0;
 }
 
 .md button {
     text-transform: lowercase;
-    letter-spacing: 2px;
+    box-shadow: none;
 }
 
 .ios button {
     text-transform: lowercase;
-    letter-spacing: 2px;
+    box-shadow: none;
 }
 
 // -- help page
 
 .help-title {
     font-size: 35px;
+}
+
+.relative {
+    position: relative;
+    margin: 0 auto; 
+    height: 20%;
+}
+
+.absolute-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+}
+
+.absolute-left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-right: 70px;
+}
+
+.narrow {
+    width: 100px;
+    margin: 0 auto;
 }
 
 //help script area
