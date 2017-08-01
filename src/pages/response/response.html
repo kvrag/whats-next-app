@@ -1,23 +1,44 @@
-<ion-content padding class="default-font grad">
+<ion-header>
+  <ion-navbar color="primary">
+  </ion-navbar>
+</ion-header>
 
-  <div class="center">
-    <h2 class="response-title"><p>An activity to try:</p></h2>
-  </div>
-  <div class="center">
-    <p class="response script">{{emote}}</p>
-  </div>
+<ion-content padding class="default-font">
 
-  <div class="center button-margin">
-    <button ion-button round large>Try Another</button>
-  </div>
-  <div class="center button-margin">
-    <button class="wide" ion-button round large (click)="returnHome()">Home</button>
-  </div>
+  <ion-grid>
+    <ion-row>
+      <h2 class="response-title"><p>An activity to try:</p></h2>
+    </ion-row>
+
+    <ion-row>
+      <p class="center response">{{emote}}</p>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-5>
+      </ion-col>
+
+      <ion-col col-2 class="center">
+        <button ion-fab (click)="returnHome()">
+          <ion-icon name="refresh"></ion-icon>
+        </button>
+      </ion-col>
+
+      <ion-col col-5>
+      </ion-col>
+      
+    </ion-row>
+
+  </ion-grid>
+
+<button ion-fab class="home-button" (click)="returnHome()">
+  <ion-icon name="home"></ion-icon>
+</button>
+
 </ion-content>
 
 <ion-footer>
   <ion-segment>
-    <ion-segment-button class="center" value="More Help" (click)="openHelp()">More Help</ion-segment-button>
   </ion-segment>
 </ion-footer>
   

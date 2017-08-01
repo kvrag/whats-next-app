@@ -58,14 +58,15 @@ export class FormVoicePage {
     let options = new RequestOptions({ headers: headers });
 
     let postParams = this.emoteForm.value;
+    
+    this.navCtrl.push('LoadingPage');
 
-    this.http.post("https://whatsnext-api.herokuapp.com/emotes", postParams, options)
+    this.http.post("https://unstuck-api.herokuapp.com/emotes", postParams, options)
     .map(res => res.json())
     .subscribe(data => {
-      this.navCtrl.push('LoadingPage');
       setTimeout(function() {
         this.navCtrl.push('ResponsePage', {emote: data.action});
-      }.bind(this), 12000);
+      }.bind(this), 7000);
       console.log(data);
     }, error => {
       console.log(error);

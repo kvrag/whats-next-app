@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="primary">
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="default-font">
+
+
+  <ion-grid>
+    <ion-row class="top-margin">
+      <h1 class="h1-title">About Unstuck</h1>
+    </ion-row>
+
+    <ion-row class="info-card">
+        <p class="wide-message">
+          Unstuck analyzes your emotional state and offers small, low-stakes activities to make your day a little more manageable or help you out of a mental rut.
+        </p>
+    </ion-row>
+
+      <div class="divider center bottom-margin"></div>
+
+    <ion-row class="info-card">
+      <h2 class="info-title wide-message">More Resources</h2>
+      <p class="wide-message">
+        If you've been feeling stuck for a long time, there are resources out there that might help you. <span class="link" (click)="openHelp()">
+        Learn More </span>
+      </p>
+    </ion-row>
+  </ion-grid>
+
+<!-- home button -->
+<button ion-fab class="home-button" (click)="returnHome()">
+  <ion-icon name="home"></ion-icon>
+</button>
+
+
+</ion-content>

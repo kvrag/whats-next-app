@@ -1,40 +1,85 @@
-<ion-content padding class="default-font grad">
+<ion-header>
+  <ion-navbar color="primary">
+  </ion-navbar>
+</ion-header>
 
-  <div class="center">
-    <h1 class="h1-title"><p>What's going on?</p></h1>
-  </div>
+<ion-content padding class="default-font">
 
-  <div class="center">
+  <ion-grid>
+    <ion-row>
+      <h1 class="h1-title center"><p>What's going on?</p></h1>
+    </ion-row>
 
-      <button ion-fab (click)="startListening()" class="inline-icon-button bottom-margin">
-        <ion-icon name="mic"></ion-icon>
-      </button>
-
-      <button ion-fab showWhen="ios" (click)="stopListening()" class="inline-icon-button bottom-margin">
-        <ion-icon name="square"></ion-icon>
-      </button>
-
-      <button ion-fab class="inline-icon-button bottom-margin">
-        <ion-icon name="refresh"></ion-icon>
-      </button> 
-  </div>
-
-  <div class="center">
-    <form [formGroup]="emoteForm" (ngSubmit)="voiceForm()">
-      <div>
-        <ion-textarea id="emote-text" class="form-font transparent" readonly value={{this.recordingContent}} formControlName="emote" rows="7"></ion-textarea>
-      </div>
-
-      <div class="center">
-        <button ion-fab class="inline-icon-button bottom-margin" (click)="returnHome()">
-          <ion-icon name="home"></ion-icon>
+    <ion-row showWhen="android,windows">
+      <ion-col col-3>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-fab class="top-margin center inline" (click)="startRecording()">
+          <ion-icon name="mic"></ion-icon>
         </button>
-        <button ion-fab type="Submit" [disabled]="!emoteForm.valid" class="inline-icon-button bottom-margin" round large>
+      </ion-col>
+      <ion-col col-2>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-fab type="Submit" [disabled]="!emoteForm.valid" class="top-margin center inline" round large>
           <ion-icon name="send"></ion-icon>
         </button>
-      </div>
-    </form>
-  </div>
+      </ion-col>
+      <ion-col col-3>
+      </ion-col>
+    </ion-row>
+
+    <ion-row showWhen="ios">
+      <ion-col col-2>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-fab class="top-margin center inline" (click)="startRecording()">
+          <ion-icon name="mic"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-fab class="top-margin center inline" (click)="stopListening()">
+          <ion-icon name="square"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-fab type="Submit" [disabled]="!emoteForm.valid" class="top-margin center inline" round large>
+          <ion-icon name="send"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-2>
+      </ion-col>
+    </ion-row>
+
+  <form [formGroup]="emoteForm" (ngSubmit)="voiceForm()">
+    <ion-row>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-10> 
+        <div>
+          <ion-textarea id="emote-text" class="form-font" readonly value={{this.recordingContent}} formControlName="emote" rows="3"></ion-textarea>
+        </div>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
+  </form>
+
+</ion-grid>
+
+  <button ion-fab class="home-button" (click)="returnHome()">
+    <ion-icon name="home"></ion-icon>
+  </button>
+
 
 
 </ion-content>
+
+
+
+
+

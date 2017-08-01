@@ -27,6 +27,12 @@ export class HomePage {
   openHelp () {
     this.navCtrl.push("HelpPage");
   }
+
+  openAbout () {
+    this.navCtrl.push("AboutPage");
+  }
+
+
   openVoiceInput() {
     if(this.platform.is('cordova')) {
       this.navCtrl.push("FormVoicePage");
