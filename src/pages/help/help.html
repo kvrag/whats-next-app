@@ -1,42 +1,51 @@
 <ion-content padding class="default-font grad">
 
   <!-- test calls Rachel -->
-  <div class="center">
-    <h2 class="response-title"><p>Find Help Nearby</p></h2>
+  
+  <div class="center bottom-margin top-margin">
+    <h1 class="h1-title">Professional Services</h1>
   </div>
-  <div class="relative">
-    <div class="absolute-left">
-      <p class="message script smaller">SAMHSA Treatment Referral Helpline</p>
-    </div>
-    <div class="absolute-right">
-      <button ion-fab class="inline-icon-button" (click)="callNumber('3092870179')">
+
+  <ion-card class="bottom-margin top-margin">
+    <ion-card-header>
+      <h2 class="response-title">Find Help Nearby</h2>
+    </ion-card-header>
+    <ion-card-content>
+
+      <button ion-fab class="inline" (click)="callNumber('3092870179')">
         <ion-icon name="call"></ion-icon>
       </button> 
-    </div>
-  </div>
+
+      <div class="inline narrow">
+        <p>SAMHSA Treatment Referral Helpline<br />1-877-726-4727</p>
+      </div>
+
+    </ion-card-content>
+  </ion-card>
 
 <!-- test calls Chris -->
-  <div class="center">
-    <h2 class="response-title"><p>Talk Now</p></h2>
-  </div>
-  <div class="relative">
-    <div class="absolute-left">
-      <p class="message script smaller">National Suicide Prevention Hotline</p>
-    </div>
-    <div class="absolute-right">
-      <button ion-fab class="inline-icon-button" (click)="callNumber('6514976454')">
+
+<ion-card class="bottom-margin top-margin">
+  <ion-card-header>
+    <h2 class="response-title">Talk Now</h2>
+  </ion-card-header>
+
+  <ion-card-content>
+      <button ion-fab class="inline" (click)="callNumber('6514976454')">
         <ion-icon name="call"></ion-icon>
       </button> 
-    </div>
-  </div>
 
+      <div class="inline narrow">
+        <p>National Suicide Prevention Hotline<br />1-800-273-8255</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+<!-- home button -->
   <div class="center">
     <button ion-fab class="inline-icon-button bottom-margin" (click)="returnHome()">
       <ion-icon name="home"></ion-icon>
     </button>
-    <!-- <button ion-fab class="inline-icon-button bottom-margin">
-      <ion-icon name="alert"></ion-icon>
-    </button> -->
-  </div>  
+  </div>
 
 </ion-content>

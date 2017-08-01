@@ -5,6 +5,7 @@
   </div>
 
   <div class="center">
+
       <button ion-fab class="inline-icon-button bottom-margin">
         <ion-icon name="mic"></ion-icon>
       </button>
@@ -21,7 +22,7 @@
   <div class="center">
     <form [formGroup]="emoteForm" (ngSubmit)="voiceForm()">
       <div>
-        <ion-textarea class="form-font transparent" formControlName="emote" rows="7"></ion-textarea>
+        <ion-textarea id="emote-text" class="form-font transparent" readonly value={{this.recordingContent}} formControlName="emote" rows="7"></ion-textarea>
       </div>
 
       <div class="center">

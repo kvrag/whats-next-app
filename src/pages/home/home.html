@@ -21,24 +21,13 @@
       <ion-icon name="create"></ion-icon>
     </button>
 
-    <button ion-fab class="inline-icon-button bottom-margin" (click)="openVoiceInput()">
+    <button ion-fab *ngIf="speechAvailable" class="inline-icon-button bottom-margin" (click)="openVoiceInput()">
       <ion-icon name="mic"></ion-icon>
     </button>
 
     <button ion-fab class="inline-icon-button bottom-margin" (click)="openHelp()">
-      <ion-icon name="help-buoy"></ion-icon>
+      <ion-icon name="help-circle"></ion-icon>
     </button>
   </div>
-
-
-  <!-- <div class="center button-margin">
-    <button class="wide" ion-button round large (click)="openInput()">Text</button>
-  </div>
-  <div class="center button-margin">
-    <button class="wide" ion-button round large (click)="openVoiceInput()">Voice</button>
-  </div>
-  <div class="center button-margin">
-    <button class="wide" ion-button round large (click)="openHelp()">SOS</button>
-  </div> -->
 
 </ion-content>
