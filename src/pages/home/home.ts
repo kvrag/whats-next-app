@@ -32,6 +32,12 @@ export class HomePage {
   openHelp () {
     this.navCtrl.push("HelpPage");
   }
+
+  openAbout () {
+    this.navCtrl.push("AboutPage");
+  }
+
+
   openVoiceInput() {
     this.navCtrl.push("FormVoicePage");
   }
