@@ -1,30 +1,42 @@
 <ion-content padding class="default-font grad">
 
-  <div class="center"> 
-    <h1 class="h1-title help-title"><p>Doctors Nearby</p></h1>
+  <!-- test calls Rachel -->
+  <div class="center">
+    <h2 class="response-title"><p>Find Help Nearby</p></h2>
+  </div>
+  <div class="relative">
+    <div class="absolute-left">
+      <p class="message script smaller">SAMHSA Treatment Referral Helpline</p>
+    </div>
+    <div class="absolute-right">
+      <button ion-fab class="inline-icon-button" (click)="callNumber('3092870179')">
+        <ion-icon name="call"></ion-icon>
+      </button> 
+    </div>
+  </div>
+
+<!-- test calls Chris -->
+  <div class="center">
+    <h2 class="response-title"><p>Talk Now</p></h2>
+  </div>
+  <div class="relative">
+    <div class="absolute-left">
+      <p class="message script smaller">National Suicide Prevention Hotline</p>
+    </div>
+    <div class="absolute-right">
+      <button ion-fab class="inline-icon-button" (click)="callNumber('6514976454')">
+        <ion-icon name="call"></ion-icon>
+      </button> 
+    </div>
   </div>
 
   <div class="center">
-    <p class="wide-message script smaller">If you've been feeling stuck for a long time, it might be worth considering talking to a mental health professional.</p>
-  </div>
-
-
-   <form [formGroup]="doctorsForm" (ngSubmit)="logForm()">
-      <ion-item class="center wide transparent">
-        <ion-input type="text" placeholder="ZIP Code" formControlName="zip"></ion-input>
-      </ion-item>
-      <div class="center">
-        <button ion-fab type="submit" [disabled]="!doctorsForm.valid" class="inline-icon-button bottom-margin" round large>
-          <ion-icon name="medkit"></ion-icon>
-        </button>
-        <button ion-fab class="inline-icon-button bottom-margin" (click)="returnHome()">
-          <ion-icon name="home"></ion-icon>
-        </button>
-        <button ion-fab class="inline-icon-button bottom-margin">
-          <ion-icon name="alert"></ion-icon>
-        </button>
-      </div>  
-   </form>
-
+    <button ion-fab class="inline-icon-button bottom-margin" (click)="returnHome()">
+      <ion-icon name="home"></ion-icon>
+    </button>
+    <!-- <button ion-fab class="inline-icon-button bottom-margin">
+      <ion-icon name="alert"></ion-icon>
+    </button> -->
+  </div>  
 
 </ion-content>

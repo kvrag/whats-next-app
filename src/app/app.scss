@@ -84,6 +84,31 @@
     font-size: 35px;
 }
 
+.relative {
+    position: relative;
+    margin: 0 auto; 
+    height: 20%;
+}
+
+.absolute-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+}
+
+.absolute-left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-right: 70px;
+}
+
+.narrow {
+    width: 100px;
+    margin: 0 auto;
+}
+
 //help script area
 .wide-message {
     width: 90%;
