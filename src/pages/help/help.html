@@ -1,30 +1,28 @@
 <ion-content padding class="default-font grad">
 
-  <div class="center"> 
-    <h1 class="h1-title help-title"><p>Doctors Nearby</p></h1>
-  </div>
 
+  <!-- test calls Rachel -->
   <div class="center">
-    <p class="wide-message script smaller">If you've been feeling stuck for a long time, it might be worth considering talking to a mental health professional.</p>
+    <h2 class="response-title"><p>Find Help Nearby</p></h2>
+    <p class="message narrow">SAMHSA Treatment Referral Helpline</p>
+    <button ion-fab class="inline-icon-button" (click)="callNumber('3092870179')">
+      <ion-icon name="call"></ion-icon>
+    </button> 
   </div>
 
 
-   <form [formGroup]="doctorsForm" (ngSubmit)="logForm()">
-      <ion-item class="center wide transparent">
-        <ion-input type="text" placeholder="ZIP Code" formControlName="zip"></ion-input>
-      </ion-item>
-      <div class="center button-margin">
-        <button ion-button type="submit" [disabled]="!doctorsForm.valid" class="button-margin" round large>Find Doctors</button>
-      </div>  
-   </form>
-
+<!-- test calls Chris -->
+  <div class="center">
+    <h2 class="response-title"><p>Talk Now</p></h2>
+    <p class="message narrow">National Suicide Prevention Hotline</p>
+    <button ion-fab class="inline-icon-button" (click)="callNumber('6514976454')">
+      <ion-icon name="call"></ion-icon>
+    </button> 
+  </div>
 
   <div class="center button-margin">
     <button class="wide" ion-button round large (click)="returnHome()">Home</button>
   </div>
 
-  <div class="center button-margin">
-    <button ion-button round large>Hotline Information</button>
-  </div>
 
 </ion-content>
