@@ -1,23 +1,33 @@
 <ion-content padding class="default-font grad">
 
-
   <!-- test calls Rachel -->
   <div class="center">
     <h2 class="response-title"><p>Find Help Nearby</p></h2>
-    <p class="message narrow">SAMHSA Treatment Referral Helpline</p>
-    <button ion-fab class="inline-icon-button" (click)="callNumber('3092870179')">
-      <ion-icon name="call"></ion-icon>
-    </button> 
   </div>
-
+  <div class="relative">
+    <div class="absolute-left">
+      <p class="message script smaller">SAMHSA Treatment Referral Helpline</p>
+    </div>
+    <div class="absolute-right">
+      <button ion-fab class="inline-icon-button" (click)="callNumber('3092870179')">
+        <ion-icon name="call"></ion-icon>
+      </button> 
+    </div>
+  </div>
 
 <!-- test calls Chris -->
   <div class="center">
     <h2 class="response-title"><p>Talk Now</p></h2>
-    <p class="message narrow">National Suicide Prevention Hotline</p>
-    <button ion-fab class="inline-icon-button" (click)="callNumber('6514976454')">
-      <ion-icon name="call"></ion-icon>
-    </button> 
+  </div>
+  <div class="relative">
+    <div class="absolute-left">
+      <p class="message script smaller">National Suicide Prevention Hotline</p>
+    </div>
+    <div class="absolute-right">
+      <button ion-fab class="inline-icon-button" (click)="callNumber('6514976454')">
+        <ion-icon name="call"></ion-icon>
+      </button> 
+    </div>
   </div>
 
   <div class="center button-margin">

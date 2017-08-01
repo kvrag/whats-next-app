@@ -79,8 +79,24 @@
     font-size: 35px;
 }
 
-.inline {
-    display: inline;
+.relative {
+    position: relative;
+    margin: 0 auto; 
+    height: 20%;
+}
+
+.absolute-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+}
+
+.absolute-left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-right: 70px;
 }
 
 .narrow {
