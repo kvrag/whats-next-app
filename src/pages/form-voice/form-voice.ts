@@ -54,7 +54,7 @@ export class FormVoicePage {
 
     let postParams = this.emoteForm.value;
 
-    this.http.post("https://whatsnext-api.herokuapp.com/emotes", postParams, options)
+    this.http.post("https://unstuck-api.herokuapp.com/emotes", postParams, options)
     .map(res => res.json())
     .subscribe(data => {
       this.navCtrl.push('LoadingPage');
