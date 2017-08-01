@@ -1,19 +1,23 @@
-// http://ionicframework.com/docs/theming/
 
-
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.home-button {
+    top: 85%;
+    left: 43%;
+    position: absolute;
+}
+
+.vertical-align {
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+}
+
+.ion-row {
+    flex: 1;
+}
 
 .center {
     margin: 0 auto;
@@ -24,6 +28,11 @@
     width: 40%;
 }
 
+.divider {
+    width: 90%;
+    border: 0.5px solid lightgrey;
+}
+
 .h1-title {
     margin-top: 20%;
     font-size: 30px;
@@ -31,16 +40,21 @@
 }
 
 .bottom-margin {
-    margin-bottom: 5%;
+    margin-bottom: 35px;
+}
+
+.align-center {
+    margin-left: 150px;
 }
 
 .top-margin {
-    margin-top: 5%;
+    margin-top: 35px;
 }
 
 .default-font {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 2px;
+    color: #222;
 }
 
 .transparent {
@@ -48,19 +62,18 @@
 }
 
 .grad {
-  background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(100%, hsla(186,50,75,1)), color-stop(0%, hsla(170,50,85,1)));
+  background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(100%, hsla(186,50,50,1)), color-stop(0%, hsla(0,0,100,1)));
 }
 
 .script {
-    font-family: 'Shadows Into Light Two', cursive; //'Kalam', cursive;//'Dawning of a New Day', cursive; //'Calligraffitti', cursive; // //'Kalam', cursive;
+    font-family: 'Shadows Into Light Two', cursive; 
     font-size: 28px;
     letter-spacing: 3px;
 }
 
 .link {
-    font-weight: bolder;
-    text-transform: uppercase;
-    color: #fff;
+    font-weight: bold;
+    color: hsla(186,50,50,1);
 }
 
 // -- buttons
@@ -76,12 +89,18 @@
 
 .md button {
     text-transform: lowercase;
+    color: white;
     box-shadow: none;
 }
 
 .ios button {
     text-transform: lowercase;
+    color: white;
     box-shadow: none;
+}
+
+.button-top-margin {
+    margin-top: 50px;
 }
 
 // -- help page
@@ -104,6 +123,16 @@
     padding-left: 20px;
 }
 
+.nav-word {
+    font-size: 18px;
+    font-weight: lighter;
+    text-transform: lowercase;
+}
+
+.title-padding {
+    padding: 20px 0;
+}
+
 //help script area
 .wide-message {
     width: 90%;
@@ -114,18 +143,37 @@
     font-size: 20px;
 }
 
+.info-card {
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.justify-right {
+    text-align: right;
+    padding-right: 25px;
+}
+
+.info-title {
+    font-size: 22px;
+    font-weight: lighter;
+} 
+
 // -- response page
 .response-title {
     font-size: 28px;
     font-weight: lighter;
+    width: 75%;
+    margin: 0 auto;
 } 
 
 // response script area
 .response {
-    font-size: 32px;
+    font-size: 35px;
     line-height: 40px;
     width: 90%;
     margin: 10% auto;
+    font-weight: lighter;
 }
 
 // -- home page
@@ -148,6 +196,7 @@
     font-size: 20px;
     font-weight: lighter;
     padding: 5px;
+    white-space: normal;
 }
 
 // -- breathing circles
