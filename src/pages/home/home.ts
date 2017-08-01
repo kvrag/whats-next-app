@@ -10,6 +10,8 @@ import { SpeechRecognition } from '@ionic-native/speech-recognition';
 export class HomePage {
   public speechAvailable: boolean = false;
 
+  splash = true;
+
   constructor(public navCtrl: NavController, private speechRecognition: SpeechRecognition) {
  
   }
@@ -17,6 +19,10 @@ export class HomePage {
   public checkSpeechAvailability() {
     this.speechRecognition.isRecognitionAvailable()
       .then((available: boolean) => this.speechAvailable = available)
+  }
+
+  ionViewDidLoad() {
+    setTimeout(() => this.splash = false, 4000);
   }
 
   openInput() {
