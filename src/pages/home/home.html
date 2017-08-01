@@ -8,7 +8,22 @@
     <p class="message script">Tell me how your day is going, and we'll get you unstuck. </p>
   </div>
 
-  <div class="center button-margin">
+  <div class="center">
+    <button ion-fab class="inline-icon-button bottom-margin" (click)="openInput()">
+      <ion-icon name="create"></ion-icon>
+    </button>
+
+    <button ion-fab class="inline-icon-button bottom-margin" (click)="openVoiceInput()">
+      <ion-icon name="mic"></ion-icon>
+    </button>
+
+    <button ion-fab class="inline-icon-button bottom-margin" (click)="openHelp()">
+      <ion-icon name="help-buoy"></ion-icon>
+    </button>
+  </div>
+
+
+  <!-- <div class="center button-margin">
     <button class="wide" ion-button round large (click)="openInput()">Text</button>
   </div>
   <div class="center button-margin">
@@ -16,6 +31,6 @@
   </div>
   <div class="center button-margin">
     <button class="wide" ion-button round large (click)="openHelp()">SOS</button>
-  </div>
+  </div> -->
 
 </ion-content>

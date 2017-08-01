@@ -16,7 +16,7 @@
 // automatically applied to the <body> element in the app.
 
 .center {
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -61,16 +61,15 @@
 .inline-icon-button {
     display: inline-block;
     margin: 5%;
+    letter-spacing: 0;
 }
 
 .md button {
     text-transform: lowercase;
-    letter-spacing: 2px;
 }
 
 .ios button {
     text-transform: lowercase;
-    letter-spacing: 2px;
 }
 
 // -- help page
