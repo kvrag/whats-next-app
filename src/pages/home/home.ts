@@ -10,6 +10,8 @@ import { SpeechRecognition } from '@ionic-native/speech-recognition';
 export class HomePage {
   public speechAvailable: boolean = false;
 
+  splash = true;
+
   constructor(public navCtrl: NavController, private speechRecognition: SpeechRecognition) {
  
   }
@@ -19,6 +21,10 @@ export class HomePage {
       .then((available: boolean) => this.speechAvailable = available)
   }
 
+  ionViewDidLoad() {
+    setTimeout(() => this.splash = false, 4000);
+  }
+
   openInput() {
     this.navCtrl.push("FormTextPage");
   };
@@ -26,6 +32,12 @@ export class HomePage {
   openHelp () {
     this.navCtrl.push("HelpPage");
   }
+
+  openAbout () {
+    this.navCtrl.push("AboutPage");
+  }
+
+
   openVoiceInput() {
     this.navCtrl.push("FormVoicePage");
   }
