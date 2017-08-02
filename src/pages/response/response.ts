@@ -21,8 +21,8 @@ export class ResponsePage {
   }
 
   lastAction(data) {
-    if (this.emote === "stuck") {
-      this.navCtrl.popToRoot();
+    if (data.action === "stuck") {
+      this.navCtrl.push('AboutPage');
     } else {
       this.navCtrl.push('ResponsePage', {emote: data.action, emote_id: data.emote_id});
     }
