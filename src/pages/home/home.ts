@@ -7,13 +7,13 @@ import { NavController, Platform } from 'ionic-angular';
 })
 
 export class HomePage {
-  
   splash = true;
   
   constructor(
     public navCtrl: NavController,
-    public platform: Platform,
+    public platform: Platform
   ) {
+
   }
   
   ionViewDidLoad() {
@@ -34,8 +34,8 @@ export class HomePage {
 
 
   openVoiceInput() {
-    if(this.platform.is('cordova')) {
+    // if(this.platform.is('cordova')) {
       this.navCtrl.push("FormVoicePage");
-    }
+    // }
   }
 }

@@ -3,107 +3,107 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="default-font">
+<ion-content class="default-font">
 
-   <ion-grid>
-    <ion-row>
-        <h1 class="h1-title title-padding">Professional Services</h1>
-    </ion-row>
+  <ion-grid no-padding>
 
-    <ion-row class="info-card">
+    <ion-row align-items-center>
       <ion-col col-1>
       </ion-col>
-      <ion-col col-8 >
-        <h2 class="info-title">Find Help Nearby</h2>
-        <p>SAMHSA Treatment Referral Helpline<br />1-877-726-4727</p>
+      <ion-col col-10>
+        <h1 class="h1-title title-padding">Professional services</h1>
       </ion-col>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
 
+    <ion-row align-items-center>
+      <ion-col col-1>
+      </ion-col>
       <ion-col col-2>
-        <button ion-fab class="inline button-top-margin" (click)="callNumber('3092870179')">
+        <button ion-fab class="inline" (click)="callNumber('3092870179')">
           <ion-icon name="call"></ion-icon>
         </button> 
       </ion-col>
-
+      <ion-col col-8>
+        <h2 class="info-title">Find help nearby</h2>
+      </ion-col>
       <ion-col col-1>
       </ion-col>
-
+    </ion-row>
+    <ion-row>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-10>
+        <p class="info-card">SAMHSA Treatment Referral Helpline<br />1-877-726-4727</p>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
     </ion-row>
     
-    <div class="divider center bottom-margin"></div>
+    <div class="divider center top-margin bottom-margin"></div>
 
-    <ion-row class="info-card">
-      
+    <ion-row align-items-center>
       <ion-col col-1>
       </ion-col>
-      
-      <ion-col col-8>
-        <h2 class="info-title">Talk Now</h2>
-        <p>National Suicide Prevention Hotline<br />1-800-273-8255</p>
-      </ion-col>
-
       <ion-col col-2>
-        <button ion-fab class="inline button-top-margin" (click)="callNumber('6514976454')">
+        <button ion-fab class="inline" (click)="callNumber('6514976454')">
           <ion-icon name="call"></ion-icon>
         </button>
       </ion-col> 
-
+      <ion-col col-8>
+        <h2 class="info-title">Talk to someone now</h2>
+      </ion-col>
       <ion-col col-1>
       </ion-col>
+    </ion-row>
 
+    <ion-row align-items-center>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-10>
+        <p class="info-card">National Suicide Prevention Hotline<br />1-800-273-8255</p>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <br />
+        <br />
+        <br />
+      </ion-col>
+    </ion-row>
+
+    <ion-row align-items-center>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-fab class="inline" (click)="returnHome()">
+          <ion-icon name="home"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8>
+        <p class="nav-word">Back to home</p>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
     </ion-row>
 
   </ion-grid>
 
-  <button ion-fab class="home-button center" (click)="returnHome()">
-    <ion-icon name="home"></ion-icon>
-  </button>
- 
-
-
-  <!-- <div class="center bottom-margin top-margin">
-    <h1 class="h1-title">Professional Services</h1>
-  </div>
-
-  <ion-card class="bottom-margin top-margin">
-    <ion-card-header>
-      <h2 class="response-title">Find Help Nearby</h2>
-    </ion-card-header>
-    <ion-card-content>
-
-      <button ion-fab class="inline" (click)="callNumber('3092870179')">
-        <ion-icon name="call"></ion-icon>
-      </button> 
-
-      <div class="inline narrow">
-        <p>SAMHSA Treatment Referral Helpline<br />1-877-726-4727</p>
-      </div>
-
-    </ion-card-content>
-  </ion-card>
-
-
-
-<ion-card class="bottom-margin top-margin">
-  <ion-card-header>
-    <h2 class="response-title">Talk Now</h2>
-  </ion-card-header>
-
-  <ion-card-content>
-      <button ion-fab class="inline" (click)="callNumber('6514976454')">
-        <ion-icon name="call"></ion-icon>
-      </button> 
-
-      <div class="inline narrow">
-        <p>National Suicide Prevention Hotline<br />1-800-273-8255</p>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-
-  <div class="center">
-    <button ion-fab class="inline-icon-button bottom-margin" (click)="returnHome()">
-      <ion-icon name="home"></ion-icon>
-    </button>
-  </div> -->
 
 </ion-content>
+
+<!-- Button Row
+    <ion-row>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-2>
+      </ion-col>
+      <ion-col col-8>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row> -->
