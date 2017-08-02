@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { SpeechRecognition } from '@ionic-native/speech-recognition';
+import { NavController, Platform } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -8,27 +7,23 @@ import { SpeechRecognition } from '@ionic-native/speech-recognition';
 })
 
 export class HomePage {
-  public speechAvailable: boolean = false;
-
+  
   splash = true;
-
-  constructor(public navCtrl: NavController, private speechRecognition: SpeechRecognition) {
- 
+  
+  constructor(
+    public navCtrl: NavController,
+    public platform: Platform,
+  ) {
   }
   
-  public checkSpeechAvailability() {
-    this.speechRecognition.isRecognitionAvailable()
-      .then((available: boolean) => this.speechAvailable = available)
-  }
-
   ionViewDidLoad() {
     setTimeout(() => this.splash = false, 4000);
   }
-
+  
   openInput() {
     this.navCtrl.push("FormTextPage");
   };
-
+  
   openHelp () {
     this.navCtrl.push("HelpPage");
   }
@@ -39,6 +34,8 @@ export class HomePage {
 
 
   openVoiceInput() {
-    this.navCtrl.push("FormVoicePage");
+    if(this.platform.is('cordova')) {
+      this.navCtrl.push("FormVoicePage");
+    }
   }
 }

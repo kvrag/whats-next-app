@@ -61,7 +61,7 @@
             "cordova-plugin-statusbar": {},
             "cordova-plugin-whitelist": {},
             "ionic-plugin-keyboard": {},
-            "com.telerik.plugins.nativepagetransitions": {}
+            "com.telerik.plugins.nativepagetransitions": {},
             "mx.ferreyra.callnumber": {},
             "cordova-plugin-speechrecognition": {}
         },

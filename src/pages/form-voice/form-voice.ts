@@ -38,7 +38,7 @@ export class FormVoicePage {
       );
   }
 
-  startRecording() {
+  startListening() {
     this.speechRecognition.startListening()
       .subscribe(
       (matches: Array<string>) => this.recordingContent = matches[0],
@@ -46,7 +46,8 @@ export class FormVoicePage {
       );
   }
 
-  stopRecording() {
+  stopListening() {
+    this.speechRecognition.stopListening();
     this.speechRecognition.stopListening();
   }
 
