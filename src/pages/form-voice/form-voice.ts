@@ -61,7 +61,7 @@ export class FormVoicePage {
     
     this.navCtrl.push('LoadingPage');
 
-    this.http.post("https://unstuck-api.herokuapp.com/emotes", postParams, options)
+    this.http.post("https://unstuck-api-staging.herokuapp.com/emotes", postParams, options)
     .map(res => res.json())
     .subscribe(data => {
       setTimeout(function() {
