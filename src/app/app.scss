@@ -38,13 +38,12 @@
 }
 
 .h1-title {
-    margin-top: 20%;
-    font-size: 30px;
+    font-size: 2em;
     font-weight: lighter;
 }
 
 .bottom-margin {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
 .align-center {
@@ -52,11 +51,12 @@
 }
 
 .top-margin {
-    margin-top: 35px;
+    margin-top: 25px;
 }
 
 .default-font {
     font-family: 'Roboto', sans-serif;
+    font-size: 1em;
     letter-spacing: 2px;
     color: #222;
 }
@@ -69,16 +69,16 @@
   background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(100%, hsla(186,50,50,1)), color-stop(0%, hsla(0,0,100,1)));
 }
 
-.script {
-    font-family: 'Shadows Into Light Two', cursive; 
-    font-size: 28px;
-    letter-spacing: 3px;
-}
+// .script {
+//     font-family: 'Shadows Into Light Two', cursive; 
+//     font-size: 28px;
+//     letter-spacing: 3px;
+// }
 
-.link {
-    font-weight: bold;
-    color: hsla(186,50,50,1);
-}
+// .link {
+//     font-weight: bold;
+//     color: hsla(186,50,50,1);
+// }
 
 // -- buttons
 .button-margin {
@@ -109,9 +109,9 @@
 
 // -- help page
 
-.help-title {
-    font-size: 35px;
-}
+// .help-title {
+//     font-size: 35px;
+// }
 
 .inline {
     display: inline-block;
@@ -128,9 +128,9 @@
 }
 
 .nav-word {
-    font-size: 18px;
+    font-size: 1.5em;
     font-weight: lighter;
-    text-transform: lowercase;
+    padding-left: 15px
 }
 
 .title-padding {
@@ -148,9 +148,11 @@
 }
 
 .info-card {
-    padding: 10px 0;
-    font-size: 18px;
+    font-size: 1.1em;
     font-weight: lighter;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    padding: 0px;
 }
 
 .justify-right {
@@ -159,9 +161,11 @@
 }
 
 .info-title {
-    font-size: 22px;
+    font-size: 1.5em;
     font-weight: lighter;
+    padding-left: 15px;
 } 
+
 
 // -- response page
 .response-title {
@@ -173,7 +177,7 @@
 
 // response script area
 .response {
-    font-size: 35px;
+    font-size: 2em;
     line-height: 40px;
     width: 90%;
     margin: 10% auto;
@@ -183,7 +187,7 @@
 // -- home page
 .main-title {
     letter-spacing: 5px;
-    font-size: 50px;
+    font-size: 2.5em;
     text-transform: lowercase;
     font-weight: lighter;
 }
@@ -197,7 +201,7 @@
 
 // -- form page
 .form-font {
-    font-size: 20px;
+    font-size: 1em;
     font-weight: lighter;
     padding: 5px;
     white-space: normal;

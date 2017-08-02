@@ -7,13 +7,13 @@ import { NavController, Platform } from 'ionic-angular';
 })
 
 export class HomePage {
-  
   splash = true;
   
   constructor(
     public navCtrl: NavController,
-    public platform: Platform,
+    public platform: Platform
   ) {
+
   }
   
   ionViewDidLoad() {
