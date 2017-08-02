@@ -34,8 +34,8 @@ export class HomePage {
 
 
   openVoiceInput() {
-    if(this.platform.is('cordova')) {
+    // if(this.platform.is('cordova')) {
       this.navCtrl.push("FormVoicePage");
-    }
+    // }
   }
 }

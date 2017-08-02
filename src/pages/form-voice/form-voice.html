@@ -3,59 +3,120 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="default-font">
+<ion-content class="default-font">
 
-  <ion-grid>
-    <ion-row>
-      <h1 class="h1-title center"><p>What's going on?</p></h1>
-    </ion-row>
-
-    <ion-row showWhen="android,windows">
-      <ion-col col-3>
+  <ion-grid no-padding>
+    <ion-row align-items-center>
+      <ion-col col-1>
       </ion-col>
-      <ion-col col-2>
-        <button ion-fab class="top-margin center inline" (click)="startListening()">
-          <ion-icon name="mic"></ion-icon>
-        </button>
-      </ion-col>
-      <ion-col col-2>
-      </ion-col>
-      <ion-col col-2>
-        <button ion-fab form="voiceForm" type="Submit" [disabled]="!emoteForm.valid" class="top-margin center inline" round large>
-          <ion-icon name="send"></ion-icon>
-        </button>
-      </ion-col>
-      <ion-col col-3>
-      </ion-col>
-    </ion-row>
-
-    <ion-row showWhen="ios">
-      <ion-col col-2>
-      </ion-col>
-      <ion-col col-2>
-        <button ion-fab class="top-margin center inline" (click)="startListening()">
-          <ion-icon name="mic"></ion-icon>
-        </button>
+      <ion-col col-10>
+        <h1 class="h1-title title-padding">What's going on?</h1>
       </ion-col>
       <ion-col col-1>
       </ion-col>
+    </ion-row>
+
+
+
+    <ion-row showWhen="android,windows" align-items-center>
+      <ion-col col-1>
+      </ion-col>
       <ion-col col-2>
-        <button ion-fab class="top-margin center inline" (click)="stopListening()">
+        <button ion-fab class="inline" (click)="startListening()">
+          <ion-icon name="mic"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8>
+        <p class="nav-word">Start talking</p>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
+
+    <ion-row showWhen="ios" align-items-center>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-fab class="inline" (click)="startListening()">
+          <ion-icon name="mic"></ion-icon>
+        </button>
+        <!-- <button ion-fab class="inline" (click)="stopListening()">
           <ion-icon name="square"></ion-icon>
-        </button>
+        </button> -->
+      </ion-col>
+      <ion-col col-8>
+        <p class="nav-word">Start talking</p>
       </ion-col>
       <ion-col col-1>
       </ion-col>
-      <ion-col col-2>
-        <button ion-fab form="voiceForm" type="Submit" [disabled]="!emoteForm.valid" class="top-margin center inline" round large>
-          <ion-icon name="send"></ion-icon>
-        </button>
-      </ion-col>
-      <ion-col col-2>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col>
+        <br />    
       </ion-col>
     </ion-row>
 
-  <form id="voiceForm" [formGroup]="emoteForm" (ngSubmit)="voiceForm()">
+    <ion-row align-items-center>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-fab form="voiceForm" type="Submit" [disabled]="!emoteForm.valid" class="inline" round large>
+          <ion-icon name="send"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8>
+        <p class="nav-word">Send</p>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <br />
+        <br />
+        <br />
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </ion-col>
+    </ion-row>
+
+    <ion-row align-items-center>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-fab class="inline" (click)="returnHome()">
+          <ion-icon name="home"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8>
+        <p class="nav-word">Back to home</p>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
+
+
+  <!-- <form id="voiceForm" [formGroup]="emoteForm" (ngSubmit)="voiceForm()">
     <ion-row>
       <ion-col col-1>
       </ion-col>
@@ -67,15 +128,9 @@
       <ion-col col-1>
       </ion-col>
     </ion-row>
-  </form>
+  </form> -->
 
 </ion-grid>
-
-  <button ion-fab class="home-button" (click)="returnHome()">
-    <ion-icon name="home"></ion-icon>
-  </button>
-
-
 
 </ion-content>
 
