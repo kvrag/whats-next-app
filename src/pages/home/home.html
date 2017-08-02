@@ -11,68 +11,78 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="default-font vertical-align">
+<ion-content class="default-font">
 
-  <ion-grid>
+  <ion-grid no-padding>
 
-    <ion-row>
-      <ion-col>
-        <div class="center top-margin">
-          <h2 class="response-title"><p>Tell me how your day is going. We'll get you unstuck. </p></h2>
-        </div>
+    <ion-row align-items-center>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-10>
+        <h1 class="h1-title title-padding">Tell us about your day.<br />Get yourself unstuck.</h1>
+      </ion-col>
+      <ion-col col-1>
       </ion-col>
     </ion-row>
 
-    <ion-row>
-      <ion-col col-4>
+    <ion-row align-items-center>
+      <ion-col col-1>
       </ion-col>
       <ion-col col-2>
-         <button ion-fab class="top-margin center inline" (click)="openInput()">
+        <button ion-fab class="inline" (click)="openInput()">
           <ion-icon name="create"></ion-icon>
         </button>
       </ion-col>
-      <ion-col col-2>
-        <div padding class="nav-word top-margin inline">Write</div> 
+      <ion-col col-8>
+        <p class="nav-word">Write</p>
       </ion-col>
-      <ion-col col-4>
+      <ion-col col-1>
       </ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col col-4>
+      <ion-col>
+        <br />    
+      </ion-col>
+    </ion-row>
+
+    <!-- *ngIf="speechAvailable" -->
+    <ion-row align-items-center>
+      <ion-col col-1>
       </ion-col>
       <ion-col col-2>
-        <!--*ngIf="speechAvailable"  -->
-         <button ion-fab  class="top-margin inline" (click)="openVoiceInput()">
+        <button ion-fab class="inline" (click)="openVoiceInput()">
           <ion-icon name="mic"></ion-icon>
         </button>
       </ion-col>
-      <ion-col col-2>
-        <div padding class="nav-word top-margin inline">Speak</div> 
+      <ion-col col-8>
+        <p class="nav-word">Speak</p>
       </ion-col>
-      <ion-col col-4>
+      <ion-col col-1>
       </ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col col-4>
+      <ion-col>
+        <br />    
+      </ion-col>
+    </ion-row>
+    
+    <ion-row align-items-center>
+      <ion-col col-1>
       </ion-col>
       <ion-col col-2>
-         <button ion-fab class="top-margin inline" (click)="openAbout()">
+        <button ion-fab class="inline" (click)="openAbout()">
           <ion-icon name="help"></ion-icon>
         </button>
       </ion-col>
-      <ion-col col-2>
-        <div padding class="nav-word top-margin inline">Info</div>
+      <ion-col col-8>
+        <p class="nav-word">Help</p>
       </ion-col>
-      <ion-col col-4>
+      <ion-col col-1>
       </ion-col>
     </ion-row>
 
   </ion-grid>
 
 </ion-content>
-
-<ion-footer color="primary">
-  <ion-segment></ion-segment>
-</ion-footer>

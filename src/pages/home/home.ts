@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, Platform } from 'ionic-angular';
+import { NavController, Platform, AlertController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -11,6 +11,7 @@ export class HomePage {
   
   constructor(
     public navCtrl: NavController,
+    public alertCtrl: AlertController,
     public platform: Platform
   ) {
 
@@ -32,10 +33,20 @@ export class HomePage {
     this.navCtrl.push("AboutPage");
   }
 
+  showAlert(message) {
+    let alert = this.alertCtrl.create({
+      title: 'Error',
+      subTitle: message,
+      buttons: ['OK']
+    });
+    alert.present();
+  }
 
   openVoiceInput() {
-    // if(this.platform.is('cordova')) {
+    if(this.platform.is('cordova')) {
       this.navCtrl.push("FormVoicePage");
-    // }
+    } else {
+      this.showAlert('Voice recognition unavailable.'); 
+    }
   }
 }
