@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http';
+import { Device } from '@ionic-native/device';
 
 @IonicPage()
 @Component({
@@ -10,10 +11,12 @@ import { Http } from '@angular/http';
 export class ResponsePage {
   public emote: any = "";
   private emote_id: any;
+  private deviceId: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, private device: Device) {
     this.emote = this.navParams.get('emote');
     this.emote_id = this.navParams.get('emote_id');
+    this.deviceId = this.device.uuid;
   }
 
   returnHome() {
@@ -24,7 +27,7 @@ export class ResponsePage {
     if (data.action === "stuck") {
       this.navCtrl.push('AboutPage');
     } else {
-      this.navCtrl.push('ResponsePage', {emote: data.action, emote_id: data.emote_id});
+      this.navCtrl.push('ResponsePage', {emote: data.action, emote_id: data.emote_id, uuid: data.deviceId});
     }
   }
 
@@ -42,7 +45,7 @@ export class ResponsePage {
   }
 
   ionViewDidLoad() {
-    
+    // console.log(this.deviceId);
   }
 
   openHelp () {
