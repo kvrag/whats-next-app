@@ -6,9 +6,6 @@
 <ion-content padding class="default-font">
 
   <ion-grid>
-    <ion-row>
-      <h2 class="response-title"><p>An activity to try:</p></h2>
-    </ion-row>
 
     <ion-row>
       <p class="center response">{{emote}}</p>
@@ -19,7 +16,7 @@
       </ion-col>
 
       <ion-col col-2 class="center">
-        <button ion-fab (click)="returnHome()">
+        <button ion-fab (click)="getAnother()">
           <ion-icon name="refresh"></ion-icon>
         </button>
       </ion-col>
