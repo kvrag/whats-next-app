@@ -14,14 +14,14 @@
       <ion-col col-3>
       </ion-col>
       <ion-col col-2>
-        <button ion-fab class="top-margin center inline" (click)="startRecording()">
+        <button ion-fab class="top-margin center inline" (click)="startListening()">
           <ion-icon name="mic"></ion-icon>
         </button>
       </ion-col>
       <ion-col col-2>
       </ion-col>
       <ion-col col-2>
-        <button ion-fab type="Submit" [disabled]="!emoteForm.valid" class="top-margin center inline" round large>
+        <button ion-fab form="voiceForm" type="Submit" [disabled]="!emoteForm.valid" class="top-margin center inline" round large>
           <ion-icon name="send"></ion-icon>
         </button>
       </ion-col>
@@ -33,7 +33,7 @@
       <ion-col col-2>
       </ion-col>
       <ion-col col-2>
-        <button ion-fab class="top-margin center inline" (click)="startRecording()">
+        <button ion-fab class="top-margin center inline" (click)="startListening()">
           <ion-icon name="mic"></ion-icon>
         </button>
       </ion-col>
@@ -47,7 +47,7 @@
       <ion-col col-1>
       </ion-col>
       <ion-col col-2>
-        <button ion-fab type="Submit" [disabled]="!emoteForm.valid" class="top-margin center inline" round large>
+        <button ion-fab form="voiceForm" type="Submit" [disabled]="!emoteForm.valid" class="top-margin center inline" round large>
           <ion-icon name="send"></ion-icon>
         </button>
       </ion-col>
@@ -55,7 +55,7 @@
       </ion-col>
     </ion-row>
 
-  <form [formGroup]="emoteForm" (ngSubmit)="voiceForm()">
+  <form id="voiceForm" [formGroup]="emoteForm" (ngSubmit)="voiceForm()">
     <ion-row>
       <ion-col col-1>
       </ion-col>
