@@ -3,39 +3,81 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="default-font">
+<ion-content class="default-font">
 
-  <ion-grid>
+  <ion-grid no-padding>
 
-    <ion-row>
-      <p class="center response">{{this.emote}}</p>
+    <ion-row align-items-center>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-10>
+        <h1 class="response-title">You could...</h1>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
     </ion-row>
 
-    <ion-row>
-      <ion-col col-5>
+    <ion-row align-items-center>
+      <ion-col col-1>
       </ion-col>
+      <ion-col col-10>
+        <h2 class="response">{{this.emote}}</h2>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
 
-      <ion-col col-2 class="center">
-        <button ion-fab (click)="getAnother()">
+    <ion-row align-items-center>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-fab class="inline" (click)="getAnother()">
           <ion-icon name="refresh"></ion-icon>
         </button>
       </ion-col>
-
-      <ion-col col-5>
+      <ion-col col-8>
+        <p class="nav-word">Something else</p>
       </ion-col>
-      
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </ion-col>
+    </ion-row>
+
+    <ion-row align-items-center>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-fab class="inline" (click)="returnHome()">
+          <ion-icon name="home"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8>
+        <p class="nav-word">Back to home</p>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
     </ion-row>
 
   </ion-grid>
 
-<button ion-fab class="home-button" (click)="returnHome()">
-  <ion-icon name="home"></ion-icon>
-</button>
-
 </ion-content>
-
-<ion-footer>
-  <ion-segment>
-  </ion-segment>
-</ion-footer>
   
