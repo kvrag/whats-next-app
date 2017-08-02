@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http, RequestOptions, Headers } from '@angular/http';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
+import { Device } from '@ionic-native/device';
 import 'rxjs/add/operator/map'
 
 @IonicPage()
@@ -14,17 +15,20 @@ import 'rxjs/add/operator/map'
 export class FormVoicePage {
   private emoteForm: FormGroup;
   public recordingContent: string;
+  private deviceId: any;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public http: Http,
     private formBuilder: FormBuilder,
-    private speechRecognition: SpeechRecognition
+    private speechRecognition: SpeechRecognition,
+    private device: Device
   ) {
     this.emoteForm = this.formBuilder.group({
       emote: ['', Validators.required]
-    })
+    });
+    this.deviceId = this.device.uuid;
   }
 
   ionViewDidLoad() {
@@ -65,8 +69,8 @@ export class FormVoicePage {
     .map(res => res.json())
     .subscribe(data => {
       setTimeout(function() {
-        this.navCtrl.push('ResponsePage', {emote: data.action});
-      }.bind(this), 7000);
+        this.navCtrl.push('ResponsePage', {emote: data.action, emote_id: data.emote_id, uuid: data.deviceId});
+      }.bind(this), 6000);
       console.log(data);
     }, error => {
       console.log(error);
