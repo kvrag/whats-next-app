@@ -169,39 +169,36 @@
 
 // -- response page
 .response-title {
-    font-size: 28px;
+    font-size: 1.9em;
     font-weight: lighter;
-    width: 75%;
-    margin: 0 auto;
+    padding-top: 20px;
 } 
 
 // response script area
 .response {
-    font-size: 2em;
-    line-height: 40px;
-    width: 90%;
-    margin: 10% auto;
+    font-size: 1.5em;
     font-weight: lighter;
+    padding-bottom: 20px;
 }
 
 // -- home page
-.main-title {
-    letter-spacing: 5px;
-    font-size: 2.5em;
-    text-transform: lowercase;
-    font-weight: lighter;
-}
+// .main-title {
+//     letter-spacing: 5px;
+//     font-size: 2.5em;
+//     text-transform: lowercase;
+//     font-weight: lighter;
+// }
 
 //home script area
-.message {
-    width: 90%;
-    margin: 5% auto;
-    padding: 5%;
-}
+// .message {
+//     width: 90%;
+//     margin: 5% auto;
+//     padding: 5%;
+// }
 
 // -- form page
 .form-font {
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: lighter;
     padding: 5px;
     white-space: normal;
