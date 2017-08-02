@@ -32,12 +32,12 @@ export class FormTextPage {
 
     this.navCtrl.push('LoadingPage');
     
-    this.http.post("https://unstuck-api.herokuapp.com/emotes", postParams, options)
+    this.http.post("https://unstuck-api-staging.herokuapp.com/emotes", postParams, options)
     .map(res => res.json())
     .subscribe(data => {
       setTimeout(function() {
-        this.navCtrl.push('ResponsePage', {emote: data.action});
-      }.bind(this), 7000);
+        this.navCtrl.push('ResponsePage', {emote: data.action, emote_id: data.emote_id});
+      }.bind(this), 6000);
       console.log(data);
     }, error => {
       console.log(error);
