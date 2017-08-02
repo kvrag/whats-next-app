@@ -32,7 +32,7 @@ export class FormVoicePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FormVoicePage');
+    // console.log('ionViewDidLoad FormVoicePage');
     this.speechRecognition.isRecognitionAvailable()
       .then((available: boolean) => console.log(available));
     this.speechRecognition.requestPermission()
@@ -62,6 +62,7 @@ export class FormVoicePage {
     let options = new RequestOptions({ headers: headers });
 
     let postParams = this.emoteForm.value;
+    postParams['uuid'] = this.deviceId;
     
     this.navCtrl.push('LoadingPage');
 
@@ -69,9 +70,11 @@ export class FormVoicePage {
     .map(res => res.json())
     .subscribe(data => {
       setTimeout(function() {
-        this.navCtrl.push('ResponsePage', {emote: data.action, emote_id: data.emote_id, uuid: data.deviceId});
+        this.navCtrl.push('ResponsePage', {emote: data.action, emote_id: data.emote_id, uuid: this.deviceId});
       }.bind(this), 6000);
       console.log(data);
+      console.log(this.deviceId);
+      console.log(postParams);
     }, error => {
       console.log(error);
     });

@@ -45,7 +45,7 @@ export class ResponsePage {
   }
 
   ionViewDidLoad() {
-    
+    // console.log(this.deviceId);
   }
 
   openHelp () {

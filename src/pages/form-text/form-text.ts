@@ -22,7 +22,7 @@ export class FormTextPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FormTextPage');
+    // console.log('ionViewDidLoad FormTextPage');
   }
 
   logForm() {
@@ -32,6 +32,7 @@ export class FormTextPage {
     let options = new RequestOptions({ headers: headers });
 
     let postParams = this.emoteForm.value;
+    postParams['uuid'] = this.deviceId;
 
     this.navCtrl.push('LoadingPage');
     
@@ -39,9 +40,11 @@ export class FormTextPage {
     .map(res => res.json())
     .subscribe(data => {
       setTimeout(function() {
-        this.navCtrl.push('ResponsePage', {emote: data.action, emote_id: data.emote_id, uuid: data.deviceId});
+        this.navCtrl.push('ResponsePage', {emote: data.action, emote_id: data.emote_id, uuid: this.deviceId});
       }.bind(this), 6000);
       console.log(data);
+      console.log(this.deviceId);
+      console.log(postParams);    
     }, error => {
       console.log(error);
     });
