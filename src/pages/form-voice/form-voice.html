@@ -16,7 +16,7 @@
       </ion-col>
     </ion-row>
 
-    <ion-row showWhen="android,windows" align-items-center>
+    <ion-row align-items-center>
       <ion-col col-1>
       </ion-col>
       <ion-col col-2>
@@ -25,47 +25,34 @@
         </button>
       </ion-col>
       <ion-col col-8>
-        <p class="nav-word">Start talking</p>
+        <p class="nav-word start-shown" id="start-word">Start talking</p>
       </ion-col>
       <ion-col col-1>
       </ion-col>
     </ion-row>
 
-    <ion-row showWhen="ios" align-items-center>
-      <ion-col col-1>
-      </ion-col>
-      <ion-col col-2>
-        <button ion-fab class="inline start-shown" (click)="startListening()">
-          <ion-icon name="mic"></ion-icon>
-        </button>
-      </ion-col>
-      <ion-col col-8>
-        <p class="nav-word start-shown" id="start-word" class="start-shown">Start talking</p>
-      </ion-col>
-      <ion-col col-1>
-      </ion-col>
-    </ion-row>
-
-    <ion-row showWhen="ios" align-items-center>
-      <ion-col col-1>
-      </ion-col>
-      <ion-col col-2>
-        <button ion-fab class="inline start-shown" (click)="startListening()">
-          <ion-icon name="mic"></ion-icon>
-        </button>
-      </ion-col>
-      <ion-col col-8>
-        <p class="nav-word start-shown" id="start-word" class="start-shown">Start talking</p>
-      </ion-col>
-      <ion-col col-1>
-      </ion-col>
-    </ion-row>
-    
-        <!-- <button ion-fab class="inline stop-shown" (click)="stopListening()">
-          <ion-icon name="square"></ion-icon>
-        </button> -->
-        <p class="nav-word stop-shown" id="stop-word" class="start-shown">Stop talking</p>
     <ion-row>
+      <ion-col>
+        <br />    
+      </ion-col>
+    </ion-row>  
+
+    <ion-row showWhen="ios" align-items-center>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-fab class="inline start-shown" (click)="stopListening()">
+          <ion-icon name="mic"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8>
+        <p class="nav-word stop-shown" id="stop-word">Stop talking</p>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
+
+    <ion-row showWhen="ios">
       <ion-col>
         <br />    
       </ion-col>

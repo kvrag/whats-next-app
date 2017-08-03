@@ -51,7 +51,7 @@ export class FormVoicePage {
       );
 
     if(this.platform.is('ios')) {
-
+//logic for the button changing to a stop button goes here
     }
   }
 
