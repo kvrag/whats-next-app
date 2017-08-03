@@ -16,7 +16,7 @@
       </ion-col>
     </ion-row>
 
-    <ion-row showWhen="android,windows" align-items-center>
+    <ion-row align-items-center>
       <ion-col col-1>
       </ion-col>
       <ion-col col-2>
@@ -25,41 +25,58 @@
         </button>
       </ion-col>
       <ion-col col-8>
-        <p class="nav-word">Start talking</p>
+        <p class="nav-word start-shown" id="start-word">Start talking</p>
       </ion-col>
       <ion-col col-1>
       </ion-col>
     </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <br />    
+      </ion-col>
+    </ion-row>  
 
     <ion-row showWhen="ios" align-items-center>
       <ion-col col-1>
       </ion-col>
       <ion-col col-2>
-        <button ion-fab class="inline" (click)="startListening()">
+        <button ion-fab class="inline start-shown" (click)="stopListening()">
           <ion-icon name="mic"></ion-icon>
         </button>
-        <!-- <button ion-fab class="inline" (click)="stopListening()">
-          <ion-icon name="square"></ion-icon>
-        </button> -->
       </ion-col>
       <ion-col col-8>
-        <p class="nav-word">Start talking</p>
+        <p class="nav-word stop-shown" id="stop-word">Stop talking</p>
       </ion-col>
       <ion-col col-1>
       </ion-col>
     </ion-row>
-    
-    <ion-row>
+
+    <ion-row showWhen="ios">
       <ion-col>
         <br />    
       </ion-col>
+    </ion-row>  
+
+   <form id="emoteForm" [formGroup]="emoteForm" (ngSubmit)="voiceForm()">
+    <ion-row>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-10> 
+        <div>
+          <ion-input id="emote-text" type="hidden" readonly value={{this.recordingContent}} formControlName="emote"></ion-input>
+        </div>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
     </ion-row>
+  </form> 
 
     <ion-row align-items-center>
       <ion-col col-1>
       </ion-col>
       <ion-col col-2>
-        <button ion-fab form="voiceForm" type="Submit" [disabled]="!emoteForm.valid" class="inline" round large>
+        <button ion-fab form="emoteForm" type="submit" [disabled]="!emoteForm.valid" class="inline" round large>
           <ion-icon name="send"></ion-icon>
         </button>
       </ion-col>
@@ -114,19 +131,6 @@
     </ion-row>
 
 
-  <!-- <form id="voiceForm" [formGroup]="emoteForm" (ngSubmit)="voiceForm()">
-    <ion-row>
-      <ion-col col-1>
-      </ion-col>
-      <ion-col col-10> 
-        <div>
-          <ion-textarea id="emote-text" class="form-font" readonly value={{this.recordingContent}} formControlName="emote" rows="3"></ion-textarea>
-        </div>
-      </ion-col>
-      <ion-col col-1>
-      </ion-col>
-    </ion-row>
-  </form> -->
 
 </ion-grid>
 

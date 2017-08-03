@@ -6,31 +6,80 @@
 <ion-content padding class="default-font">
 
 
-  <ion-grid>
-    <ion-row class="top-margin">
-      <h1 class="h1-title">About Unstuck</h1>
+  <ion-grid no-padding>
+
+    <ion-row align-items-center>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-10>
+        <h1 class="response-title">About unstuck</h1>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
     </ion-row>
 
-    <ion-row class="info-card">
-        <p class="wide-message">
-          Unstuck analyzes your emotional state and offers small, low-stakes activities to make your day a little more manageable or help you out of a mental rut.
+    <ion-row align-items-center>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-10>
+        <p class="info-card">
+          unstuck listens to you and uses Emoj, an emotionally intelligent natural language processing tool. We then suggest small, low-stakes activities to help you get out of a rut.
         </p>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
     </ion-row>
 
-      <div class="divider center bottom-margin"></div>
+    <div class="divider center"></div>
 
-    <ion-row class="info-card">
-      <h2 class="info-title wide-message">More Resources</h2>
-      <p class="wide-message">
-        If you've been feeling stuck for a long time, there are resources out there that might help you. <span class="link" (click)="openHelp()">
-        Learn More </span>
+    <ion-row align-items-center>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-10>
+      <p class="info-card bottom-margin">
+        If you've been feeling stuck for a long time, there are resources out there that might help you:
       </p>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
     </ion-row>
+
+    <ion-row align-items-center>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-fab class="inline" (click)="openHelp()">
+          <ion-icon name="chatbubbles"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8>
+        <p class="nav-word">More help</p>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <br />    
+      </ion-col>
+    </ion-row>
+
+    <ion-row align-items-center>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-fab class="inline" (click)="returnHome()">
+          <ion-icon name="home"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8>
+        <p class="nav-word">Back to unstuck</p>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
+
   </ion-grid>
-
-<button ion-fab class="home-button" (click)="returnHome()">
-  <ion-icon name="home"></ion-icon>
-</button>
-
 
 </ion-content>

@@ -3,52 +3,63 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="default-font">
- 
-  <!-- <span ion-fixed style="height: 100%; width: 100%"> -->
+<ion-content class="default-font">
 
-  <ion-grid>
-    <ion-row>
+  <ion-grid no-padding>
+    <ion-row align-items-center>
       <ion-col col-1>
       </ion-col>
       <ion-col col-10>
-        <h1 class="h1-title"><p>What's going on?</p></h1>    
+        <h1 class="response-title">What's going on?</h1>
       </ion-col>
       <ion-col col-1>
       </ion-col>
     </ion-row>
 
+  <form [formGroup]="emoteForm" (ngSubmit)="logForm()">
     <ion-row>
       <ion-col col-1>
       </ion-col>
       <ion-col col-10>
-        <form [formGroup]="emoteForm" (ngSubmit)="logForm()">
           <div>
             <ion-input class="form-font overflow" formControlName="emote" rows="1"></ion-input>
           </div>
-          
-        <div class="center">
-          <button ion-fab type="submit" [disabled]="!emoteForm.valid" class="inline-icon-button bottom-margin" round large>
-            <ion-icon name="send"></ion-icon>
-          </button>
-        </div>
+        </ion-col>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
 
-        </form>
+    <ion-row align-items-center>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-fab type="submit" [disabled]="!emoteForm.valid" class="inline" round large>
+          <ion-icon name="send"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8>
+        <p class="nav-word">Send</p>
       </ion-col>
       <ion-col col-1>
       </ion-col>
     </ion-row>
 
+    <ion-row align-items-center>
+      <ion-col col-1>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-fab class="inline" (click)="returnHome()">
+          <ion-icon name="home"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8>
+        <p class="nav-word">Back to home</p>
+      </ion-col>
+      <ion-col col-1>
+      </ion-col>
+    </ion-row>
+  </form>
+  
   </ion-grid>
-
-  <button ion-fab class="home-button" (click)="returnHome()">
-    <ion-icon name="home"></ion-icon>
-  </button>
-
-  <!-- </span> -->
-
 </ion-content>
 
-<ion-footer color="primary">
-  <ion-segment></ion-segment>
-</ion-footer>
