@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 import { Http, RequestOptions, Headers } from '@angular/http';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
@@ -23,7 +23,8 @@ export class FormVoicePage {
     public http: Http,
     private formBuilder: FormBuilder,
     private speechRecognition: SpeechRecognition,
-    private device: Device
+    private device: Device,
+    private platform: Platform
   ) {
     this.emoteForm = this.formBuilder.group({
       emote: ['', Validators.required]
@@ -48,10 +49,13 @@ export class FormVoicePage {
       (matches: Array<string>) => this.recordingContent = matches[0],
       (onerror) => console.log('error:', onerror)
       );
+
+    if(this.platform.is('ios')) {
+
+    }
   }
 
   stopListening() {
-    this.speechRecognition.stopListening();
     this.speechRecognition.stopListening();
   }
 
