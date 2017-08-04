@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { Http, RequestOptions, Headers } from '@angular/http';
 import { Device } from '@ionic-native/device';
+import { Keyboard } from '@ionic-native/keyboard';
 import 'rxjs/add/operator/map';
 
 @IonicPage()
@@ -14,7 +15,7 @@ export class FormTextPage {
   private emoteForm: FormGroup;
   private deviceId: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private formBuilder: FormBuilder, public http: Http, private device: Device) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private formBuilder: FormBuilder, public http: Http, private device: Device, private keyboard: Keyboard) {
      this.emoteForm = this.formBuilder.group({
       emote: ['', Validators.required]
     });
@@ -23,6 +24,7 @@ export class FormTextPage {
 
   ionViewDidLoad() {
     // console.log('ionViewDidLoad FormTextPage');
+    this.keyboard.show()
   }
 
   logForm() {
