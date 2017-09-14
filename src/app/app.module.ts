@@ -10,6 +10,7 @@ import { Device } from '@ionic-native/device';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SpeechRecognition } from '@ionic-native/speech-recognition';
+import { Keyboard } from '@ionic-native/keyboard'
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SpeechRecognition } from '@ionic-native/speech-recognition';
     SpeechRecognition,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CallNumber,
-    Device
+    Device,
+    Keyboard
   ]
 })
 export class AppModule {}

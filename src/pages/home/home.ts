@@ -7,7 +7,7 @@ import { NavController, Platform, AlertController } from 'ionic-angular';
 })
 
 export class HomePage {
-  splash = true;
+  //splash = true;
   
   constructor(
     public navCtrl: NavController,
@@ -18,7 +18,7 @@ export class HomePage {
   }
   
   ionViewDidLoad() {
-    setTimeout(() => this.splash = false, 4000);
+    //setTimeout(() => this.splash = false, 4000);
   }
   
   openInput() {
@@ -43,10 +43,10 @@ export class HomePage {
   }
 
   openVoiceInput() {
-    if(this.platform.is('cordova')) {
+    // if(this.platform.is('cordova')) {
       this.navCtrl.push("FormVoicePage");
-    } else {
-      this.showAlert('Voice recognition unavailable.'); 
-    }
+    // } else {
+    //   this.showAlert('Voice recognition unavailable.'); 
+    // }
   }
 }
